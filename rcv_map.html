@@ -481,6 +481,7 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; background: #0d0d10; co
 <div id="bottom-bar">
   <div id="stepper"></div>
   <div id="scrubber"><input type="range" id="scrubber-input" min="0" step="1" value="0"></div>
+  <div id="bb-story-card" style="display:none;width:100%;"></div>
 </div>
 
 <!-- Mobile Info Strip -->
@@ -1380,6 +1381,7 @@ init();
 // ═══════════════════════════════════════════════════════════════════
 
 let storyMode = true;
+let storyDone = false; // once true, story mode never re-engages
 
 function fmt(n) { return n != null ? n.toLocaleString() : '—'; }
 function getStoryData() { return electionData?.story || {}; }
@@ -1419,32 +1421,38 @@ function getTransferSummary(round) {
 
 function isDesktop() { return window.innerWidth >= 769; }
 
-function showBottomBarCard(html, onDone) {
-  const bar = document.getElementById('bottom-bar');
-  if (!bar) return false;
-  // Save original contents
-  if (!bar._storyBackup) bar._storyBackup = bar.innerHTML;
-  bar.innerHTML = `<div id="bb-story-card">${html}</div>`;
-  // Wire done callback on #bb-done-btn if present
-  const doneBtn = document.getElementById('bb-done-btn');
-  if (doneBtn && onDone) doneBtn.addEventListener('click', onDone);
-  const backBtn = document.getElementById('bb-back-btn');
-  return true;
+function showBottomBarCard(html) {
+  const card = document.getElementById('bb-story-card');
+  const stepper = document.getElementById('stepper');
+  const scrubber = document.getElementById('scrubber');
+  if (!card) return;
+  card.innerHTML = html;
+  card.style.display = 'flex';
+  card.style.alignItems = 'center';
+  card.style.width = '100%';
+  if (stepper) stepper.style.display = 'none';
+  if (scrubber) scrubber.style.display = 'none';
 }
 
 function restoreBottomBar() {
-  const bar = document.getElementById('bottom-bar');
-  if (bar && bar._storyBackup) {
-    bar.innerHTML = bar._storyBackup;
-    bar._storyBackup = null;
-    // Re-wire scrubber
-    const s = document.getElementById('scrubber-input');
-    if (s) {
-      s.addEventListener('input', () => goToRound(parseInt(s.value) + 1, false));
-      s.addEventListener('change', () => goToRound(parseInt(s.value) + 1, true));
-    }
-    renderStepper && renderStepper();
-  }
+  const card = document.getElementById('bb-story-card');
+  const stepper = document.getElementById('stepper');
+  const scrubber = document.getElementById('scrubber');
+  if (!card || card.style.display === 'none') return; // already restored
+  card.style.display = 'none';
+  card.innerHTML = '';
+  if (stepper) stepper.style.display = '';
+  if (scrubber) scrubber.style.display = '';
+}
+
+function exitStoryMode() {
+  storyMode = false;
+  storyDone = true;
+  restoreBottomBar();
+  document.getElementById('story-summary-strip').classList.remove('visible');
+  const overlay = document.getElementById('story-overlay');
+  overlay.classList.add('hidden');
+  overlay.classList.remove('fading');
 }
 
 function dismissOverlayThen(callback) {
@@ -1483,7 +1491,7 @@ function showTitleCard() {
     dismissOverlayThen(() => showPreRoundCard(1));
   });
   document.getElementById('story-skip-btn').addEventListener('click', () => {
-    dismissOverlayThen(null);
+    exitStoryMode();
   });
 }
 
@@ -1640,7 +1648,7 @@ function showSummaryStrip(text, round) {
   document.getElementById('story-summary-strip').classList.add('visible');
   newDismiss.addEventListener('click', () => {
     document.getElementById('story-summary-strip').classList.remove('visible');
-    if (hasNext) showPreRoundCard(round + 1);
+    if (hasNext && !storyDone) showPreRoundCard(round + 1);
   });
 }
 
@@ -1648,8 +1656,8 @@ function showSummaryStrip(text, round) {
 const __storyOrigGoToRound = goToRound;
 goToRound = function(round, animate) {
   if (!storyMode) {
-    document.getElementById('story-summary-strip').classList.remove('visible');
-    restoreBottomBar();
+    // Manual navigation — permanently done with story mode
+    exitStoryMode();
   }
   __storyOrigGoToRound(round, animate);
 };
