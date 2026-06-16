@@ -1,0 +1,1523 @@
+{
+  "meta": {
+    "id": "2018_cd2_dem",
+    "race": "ME-CD2 Democratic Primary",
+    "year": 2018,
+    "total_ballots": 50845,
+    "data_note": "Per-town data from 1,243-ballot CVR sample (~2.4%); scaled to official SOS R1 and Final district totals. Intermediate rounds estimated from sample proportions.",
+    "candidates": [
+      {
+        "id": "golden",
+        "name": "Jared Golden",
+        "color": "#E07B39"
+      },
+      {
+        "id": "stclair",
+        "name": "Lucas St. Clair",
+        "color": "#3B7BC8"
+      },
+      {
+        "id": "olson",
+        "name": "Craig Olson",
+        "color": "#5BA85A"
+      },
+      {
+        "id": "fulford",
+        "name": "Jonathan Fulford",
+        "color": "#9B6BB5"
+      }
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "label": "Round 1",
+        "eliminated": null
+      },
+      {
+        "round": 2,
+        "label": "Round 2",
+        "eliminated": "fulford"
+      },
+      {
+        "round": 3,
+        "label": "Round 3",
+        "eliminated": "olson"
+      },
+      {
+        "round": 4,
+        "label": "Final",
+        "eliminated": null,
+        "winner": "golden"
+      }
+    ],
+    "district_totals": {
+      "1": {
+        "golden": 20935,
+        "stclair": 17695,
+        "olson": 3962,
+        "fulford": 2459
+      },
+      "2": {
+        "golden": 21816,
+        "stclair": 18098,
+        "olson": 4636
+      },
+      "3": {
+        "golden": 24505,
+        "stclair": 20517
+      },
+      "4": {
+        "golden": 23611,
+        "stclair": 19853
+      }
+    }
+  },
+  "towns": {
+    "ABBOT": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40,
+            "olson": 0,
+            "fulford": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40,
+            "olson": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ADDISON": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 1499,
+            "stclair": 1572,
+            "olson": 140,
+            "fulford": 37
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 1499,
+            "stclair": 1612,
+            "olson": 140
+          },
+          "received": {
+            "stclair": 36
+          },
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 1543,
+            "stclair": 1693
+          },
+          "received": {
+            "golden": 36,
+            "stclair": 72
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 1543,
+            "stclair": 1693
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BAILEYVILLE": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 1366,
+            "stclair": 1411,
+            "olson": 253,
+            "fulford": 37
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 1410,
+            "stclair": 1411,
+            "olson": 253
+          },
+          "received": {
+            "golden": 36
+          },
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 1587,
+            "stclair": 1532
+          },
+          "received": {
+            "stclair": 109,
+            "golden": 145
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 1587,
+            "stclair": 1532
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BANGOR": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 3967,
+            "stclair": 4031,
+            "olson": 421,
+            "fulford": 257
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 4055,
+            "stclair": 4031,
+            "olson": 534
+          },
+          "received": {
+            "olson": 145,
+            "golden": 72
+          },
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 4319,
+            "stclair": 4273
+          },
+          "received": {
+            "stclair": 217,
+            "golden": 217
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 4319,
+            "stclair": 4273
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BELFAST": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 837,
+            "stclair": 484,
+            "olson": 281,
+            "fulford": 771
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 1102,
+            "stclair": 605,
+            "olson": 506
+          },
+          "received": {
+            "olson": 290,
+            "golden": 217,
+            "stclair": 109
+          },
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 1454,
+            "stclair": 806
+          },
+          "received": {
+            "stclair": 181,
+            "golden": 290
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 1454,
+            "stclair": 806
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BINGHAM": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40,
+            "olson": 0,
+            "fulford": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40,
+            "olson": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BROOKSVILLE": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 44,
+            "stclair": 0,
+            "olson": 0,
+            "fulford": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 44,
+            "stclair": 0,
+            "olson": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 44,
+            "stclair": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 44,
+            "stclair": 0
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CALAIS": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 3085,
+            "stclair": 2539,
+            "olson": 140,
+            "fulford": 147
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 3129,
+            "stclair": 2539,
+            "olson": 197
+          },
+          "received": {
+            "golden": 36,
+            "olson": 72
+          },
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 3261,
+            "stclair": 2660
+          },
+          "received": {
+            "stclair": 109,
+            "golden": 109
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 3261,
+            "stclair": 2660
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CHERRYFIELD": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 1102,
+            "stclair": 1330,
+            "olson": 169,
+            "fulford": 37
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 1102,
+            "stclair": 1330,
+            "olson": 169
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 1190,
+            "stclair": 1491
+          },
+          "received": {
+            "stclair": 145,
+            "golden": 72
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 1190,
+            "stclair": 1491
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "DETROIT": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40,
+            "olson": 0,
+            "fulford": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40,
+            "olson": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HANCOCK": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 44,
+            "stclair": 0,
+            "olson": 0,
+            "fulford": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 44,
+            "stclair": 0,
+            "olson": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 44,
+            "stclair": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 44,
+            "stclair": 0
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HEBRON": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 44,
+            "stclair": 0,
+            "olson": 0,
+            "fulford": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 44,
+            "stclair": 0,
+            "olson": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 44,
+            "stclair": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 44,
+            "stclair": 0
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HERMON": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 485,
+            "stclair": 242,
+            "olson": 0,
+            "fulford": 73
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 485,
+            "stclair": 242,
+            "olson": 56
+          },
+          "received": {
+            "olson": 72
+          },
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 573,
+            "stclair": 242
+          },
+          "received": {
+            "golden": 72
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 573,
+            "stclair": 242
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ISLESBORO": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 0,
+            "stclair": 81,
+            "olson": 1180,
+            "fulford": 37
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 0,
+            "stclair": 81,
+            "olson": 1208
+          },
+          "received": {
+            "olson": 36
+          },
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 881,
+            "stclair": 605
+          },
+          "received": {
+            "golden": 725,
+            "stclair": 471
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 881,
+            "stclair": 605
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "KENDUSKEAG": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40,
+            "olson": 0,
+            "fulford": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40,
+            "olson": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LAMOINE": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 44,
+            "stclair": 363,
+            "olson": 0,
+            "fulford": 73
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 44,
+            "stclair": 403,
+            "olson": 28
+          },
+          "received": {
+            "olson": 36,
+            "stclair": 36
+          },
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 44,
+            "stclair": 443
+          },
+          "received": {
+            "stclair": 36
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 44,
+            "stclair": 443
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LEE": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 44,
+            "stclair": 0,
+            "olson": 0,
+            "fulford": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 44,
+            "stclair": 0,
+            "olson": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 44,
+            "stclair": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 44,
+            "stclair": 0
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LINCOLNVILLE": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 132,
+            "stclair": 322,
+            "olson": 56,
+            "fulford": 220
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 132,
+            "stclair": 443,
+            "olson": 84
+          },
+          "received": {
+            "stclair": 109,
+            "olson": 36
+          },
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 176,
+            "stclair": 524
+          },
+          "received": {
+            "golden": 36,
+            "stclair": 72
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 176,
+            "stclair": 524
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MACHIAS": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 1543,
+            "stclair": 2580,
+            "olson": 618,
+            "fulford": 184
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 1675,
+            "stclair": 2580,
+            "olson": 646
+          },
+          "received": {
+            "olson": 36,
+            "golden": 109
+          },
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 1983,
+            "stclair": 2983
+          },
+          "received": {
+            "stclair": 362,
+            "golden": 254
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 1983,
+            "stclair": 2983
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MADISON": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 0,
+            "stclair": 0,
+            "olson": 0,
+            "fulford": 37
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 0,
+            "stclair": 0,
+            "olson": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 0,
+            "stclair": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 0,
+            "stclair": 0
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MATTAWAMKEG": {
+      "county": "Unknown",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40,
+            "olson": 0,
+            "fulford": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40,
+            "olson": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MILTON TWP": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 88,
+            "stclair": 0,
+            "olson": 28,
+            "fulford": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 88,
+            "stclair": 0,
+            "olson": 28
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 88,
+            "stclair": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 88,
+            "stclair": 0
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "NEWRY": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 0,
+            "stclair": 121,
+            "olson": 0,
+            "fulford": 37
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 0,
+            "stclair": 121,
+            "olson": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 0,
+            "stclair": 121
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 0,
+            "stclair": 121
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "NORRIDGEWOCK": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 176,
+            "stclair": 40,
+            "olson": 56,
+            "fulford": 110
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 309,
+            "stclair": 40,
+            "olson": 56
+          },
+          "received": {
+            "golden": 109
+          },
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 309,
+            "stclair": 81
+          },
+          "received": {
+            "stclair": 36
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 309,
+            "stclair": 81
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "NORTHPORT": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 529,
+            "stclair": 524,
+            "olson": 140,
+            "fulford": 147
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 573,
+            "stclair": 524,
+            "olson": 197
+          },
+          "received": {
+            "golden": 36,
+            "olson": 72
+          },
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 661,
+            "stclair": 645
+          },
+          "received": {
+            "stclair": 109,
+            "golden": 72
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 661,
+            "stclair": 645
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ORRINGTON": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 441,
+            "stclair": 322,
+            "olson": 28,
+            "fulford": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 441,
+            "stclair": 322,
+            "olson": 28
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 441,
+            "stclair": 322
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 441,
+            "stclair": 322
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PENOBSCOT": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 309,
+            "stclair": 564,
+            "olson": 56,
+            "fulford": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 309,
+            "stclair": 564,
+            "olson": 56
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 309,
+            "stclair": 605
+          },
+          "received": {
+            "stclair": 36
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 309,
+            "stclair": 605
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PERU": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 1058,
+            "stclair": 161,
+            "olson": 84,
+            "fulford": 73
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 1146,
+            "stclair": 161,
+            "olson": 84
+          },
+          "received": {
+            "golden": 72
+          },
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 1190,
+            "stclair": 242
+          },
+          "received": {
+            "stclair": 72,
+            "golden": 36
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 1190,
+            "stclair": 242
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "RUMFORD": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 4099,
+            "stclair": 605,
+            "olson": 281,
+            "fulford": 147
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 4143,
+            "stclair": 685,
+            "olson": 309
+          },
+          "received": {
+            "stclair": 72,
+            "olson": 36,
+            "golden": 36
+          },
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 4319,
+            "stclair": 766
+          },
+          "received": {
+            "golden": 145,
+            "stclair": 72
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 4319,
+            "stclair": 766
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SEARSPORT": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40,
+            "olson": 28,
+            "fulford": 37
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40,
+            "olson": 56
+          },
+          "received": {
+            "olson": 36
+          },
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 0,
+            "stclair": 121
+          },
+          "received": {
+            "stclair": 72
+          },
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 0,
+            "stclair": 121
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SKOWHEGAN": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40,
+            "olson": 0,
+            "fulford": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40,
+            "olson": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SOUTHWEST HARBOR": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 0,
+            "stclair": 81,
+            "olson": 0,
+            "fulford": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 0,
+            "stclair": 81,
+            "olson": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 0,
+            "stclair": 81
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 0,
+            "stclair": 81
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WALDO": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40,
+            "olson": 0,
+            "fulford": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40,
+            "olson": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 0,
+            "stclair": 40
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WASHINGTON TWP": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "golden": 0,
+            "stclair": 0,
+            "olson": 0,
+            "fulford": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "2": {
+          "votes": {
+            "golden": 0,
+            "stclair": 0,
+            "olson": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "3": {
+          "votes": {
+            "golden": 0,
+            "stclair": 0
+          },
+          "received": null,
+          "exhausted": 0
+        },
+        "4": {
+          "votes": {
+            "golden": 0,
+            "stclair": 0
+          },
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    }
+  }
+}
