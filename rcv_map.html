@@ -412,6 +412,39 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; background: #0d0d10; co
     width: 420px;
   }
 }
+/* ── Desktop bottom-bar story card ──────────────────────────── */
+@media (min-width: 769px) {
+  #bb-story-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    padding: 0 8px;
+    font-variant-numeric: tabular-nums;
+  }
+  .bb-eyebrow {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.14em;
+    text-transform: uppercase; color: #b8963c;
+    white-space: nowrap; flex-shrink: 0;
+  }
+  .bb-body {
+    font-size: 12px; color: #8888a4; line-height: 1.5; flex: 1;
+  }
+  .bb-body strong { color: #eaeaf2; }
+  .bb-transfers {
+    flex-shrink: 0; width: 220px;
+  }
+  .bb-transfers .story-transfer-row { margin-bottom: 4px; font-size: 11px; }
+  .bb-actions {
+    display: flex; gap: 8px; flex-shrink: 0;
+  }
+  .bb-actions .story-btn {
+    width: auto; display: inline-block;
+    padding: 8px 18px; font-size: 11px; min-height: 36px;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1380,6 +1413,40 @@ function getTransferSummary(round) {
   };
 }
 
+// ── Desktop bottom-bar story strip ────────────────────────────
+// On desktop (≥769px) pre-round cards take over the bottom-bar
+// instead of popping a floating overlay.
+
+function isDesktop() { return window.innerWidth >= 769; }
+
+function showBottomBarCard(html, onDone) {
+  const bar = document.getElementById('bottom-bar');
+  if (!bar) return false;
+  // Save original contents
+  if (!bar._storyBackup) bar._storyBackup = bar.innerHTML;
+  bar.innerHTML = `<div id="bb-story-card">${html}</div>`;
+  // Wire done callback on #bb-done-btn if present
+  const doneBtn = document.getElementById('bb-done-btn');
+  if (doneBtn && onDone) doneBtn.addEventListener('click', onDone);
+  const backBtn = document.getElementById('bb-back-btn');
+  return true;
+}
+
+function restoreBottomBar() {
+  const bar = document.getElementById('bottom-bar');
+  if (bar && bar._storyBackup) {
+    bar.innerHTML = bar._storyBackup;
+    bar._storyBackup = null;
+    // Re-wire scrubber
+    const s = document.getElementById('scrubber-input');
+    if (s) {
+      s.addEventListener('input', () => goToRound(parseInt(s.value) + 1, false));
+      s.addEventListener('change', () => goToRound(parseInt(s.value) + 1, true));
+    }
+    renderStepper && renderStepper();
+  }
+}
+
 function dismissOverlayThen(callback) {
   const overlay = document.getElementById('story-overlay');
   overlay.classList.add('fading');
@@ -1481,6 +1548,36 @@ function showPreRoundCard(round) {
     }
   }
 
+  // ── Desktop: inject into bottom-bar ──────────────────────────
+  if (isDesktop()) {
+    const backHtml = round > 1
+      ? `<button class="story-btn secondary" id="bb-back-btn">← BACK</button>` : '';
+    showBottomBarCard(`
+      <div class="bb-eyebrow">${isFirst ? 'Round 1' : `Round ${round} of ${rounds.length}`} &nbsp;·&nbsp; ${headline}</div>
+      <div class="bb-body">${body || ''}</div>
+      ${transferHTML ? `<div class="bb-transfers">${transferHTML}</div>` : ''}
+      <div class="bb-actions">${backHtml}<button class="story-btn" id="bb-done-btn">SHOW ME →</button></div>
+    `);
+    storyMode = true;
+
+    document.getElementById('bb-done-btn').addEventListener('click', () => {
+      restoreBottomBar();
+      storyMode = false;
+      goToRound(round, true);
+      const afterText = storyRound.after || generateAfterText(round);
+      if (afterText) setTimeout(() => showSummaryStrip(afterText, round), 1800);
+    });
+    const bbBack = document.getElementById('bb-back-btn');
+    if (bbBack) {
+      bbBack.addEventListener('click', () => {
+        restoreBottomBar();
+        showPreRoundCard(round - 1);
+      });
+    }
+    return;
+  }
+
+  // ── Mobile: use overlay bottom-sheet ──────────────────────────
   document.getElementById('story-card-inner').innerHTML = `
     <div class="story-eyebrow">${isFirst ? 'Round 1' : `Round ${round} of ${rounds.length}`}</div>
     <div class="story-title">${headline}</div>
@@ -1547,11 +1644,12 @@ function showSummaryStrip(text, round) {
   });
 }
 
-// Hide summary strip on manual navigation
+// Hide summary strip + restore bottom-bar on manual navigation
 const __storyOrigGoToRound = goToRound;
 goToRound = function(round, animate) {
   if (!storyMode) {
     document.getElementById('story-summary-strip').classList.remove('visible');
+    restoreBottomBar();
   }
   __storyOrigGoToRound(round, animate);
 };
