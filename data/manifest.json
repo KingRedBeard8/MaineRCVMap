@@ -6,7 +6,7 @@
     "race": "CD2 Democratic Primary",
     "status": "available",
     "dataUrl": "data/rcv_2018_cd2_dem.json",
-    "meta": "4 candidates · 4 rounds · 50,845 ballots",
+    "meta": "4 candidates · 2 rounds · 50,845 ballots",
     "candidates": ["Golden", "St. Clair", "Olson", "Fulford"]
   },
   {
