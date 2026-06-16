@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maine RCV Maps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  background: #0d0d10;
+  color: #eaeaf2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ─────────────────────────────────────────────────────── */
+header {
+  padding: 56px 40px 40px;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #eaeaf2;
+  margin-bottom: 8px;
+}
+.header-divider {
+  height: 2px;
+  width: 48px;
+  background: #b8963c;
+  margin: 14px 0 16px;
+}
+header p {
+  font-size: 14px;
+  color: #8888a4;
+  line-height: 1.6;
+  max-width: 480px;
+}
+
+/* ── Main ────────────────────────────────────────────────────────── */
+main {
+  flex: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 40px 60px;
+}
+.section-label {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8888a4;
+  margin-bottom: 20px;
+}
+
+/* ── Elections grid ──────────────────────────────────────────────── */
+.elections-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+/* ── Election cards ──────────────────────────────────────────────── */
+.election-card {
+  background: #16161c;
+  border: 1px solid #2a2a36;
+  border-radius: 8px;
+  padding: 28px;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  position: relative;
+}
+.election-card.available:hover {
+  border-color: #b8963c;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(184, 150, 60, 0.12);
+  cursor: pointer;
+}
+.election-card.coming-soon {
+  opacity: 0.55;
+  cursor: default;
+}
+.election-card.coming-soon:hover {
+  border-color: #2a2a36;
+  transform: none;
+  box-shadow: none;
+}
+.card-year {
+  font-size: 36px;
+  font-weight: 700;
+  color: #b8963c;
+  line-height: 1;
+  margin-bottom: 6px;
+  font-variant-numeric: tabular-nums;
+}
+.card-race {
+  font-size: 14px;
+  font-weight: 600;
+  color: #eaeaf2;
+  margin-bottom: 8px;
+}
+.card-meta {
+  font-size: 12px;
+  color: #8888a4;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+.card-cta {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #b8963c;
+}
+.card-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #8888a4;
+  border: 1px solid #2a2a36;
+  padding: 3px 8px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-top: 4px;
+}
+
+/* ── Candidate roster on card ────────────────────────────────────── */
+.card-candidates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+.card-cand-dot {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  color: #8888a4;
+}
+.card-cand-dot .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+/* ── Tooltip for coming-soon ─────────────────────────────────────── */
+.coming-soon-tooltip {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 0;
+  right: 0;
+  background: #1e1e26;
+  border: 1px solid #2a2a36;
+  border-radius: 6px;
+  padding: 12px 14px;
+  font-size: 12px;
+  color: #8888a4;
+  line-height: 1.5;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+}
+.coming-soon-tooltip.visible {
+  opacity: 1;
+}
+
+/* ── About section ───────────────────────────────────────────────── */
+.about-section {
+  border-top: 1px solid #2a2a36;
+  padding-top: 32px;
+}
+.about-section h2 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #eaeaf2;
+  margin-bottom: 12px;
+}
+.about-section p {
+  font-size: 13px;
+  color: #8888a4;
+  line-height: 1.7;
+  max-width: 600px;
+}
+.about-section p + p { margin-top: 10px; }
+
+/* ── Footer ──────────────────────────────────────────────────────── */
+footer {
+  border-top: 1px solid #2a2a36;
+  padding: 18px 40px;
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: #8888a4;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+footer a { color: #8888a4; text-decoration: none; }
+footer a:hover { color: #b8963c; }
+.footer-methodology {
+  font-size: 11px;
+  color: #555570;
+  font-style: italic;
+  flex-basis: 100%;
+}
+
+/* ── Mobile ──────────────────────────────────────────────────────── */
+@media (max-width: 600px) {
+  header { padding: 36px 20px 28px; }
+  main { padding: 0 20px 40px; }
+  footer { padding: 16px 20px; }
+  .elections-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Maine RCV Maps</h1>
+  <div class="header-divider"></div>
+  <p>Interactive ranked-choice voting visualizations built from official cast vote records.</p>
+</header>
+
+<main>
+  <div class="section-label">Available Elections</div>
+
+  <section class="elections-grid">
+    <!-- 2018 CD2 Democratic Primary — available -->
+    <a href="rcv_map.html" class="election-card available">
+      <div class="card-year">2018</div>
+      <div class="card-race">CD2 Democratic Primary</div>
+      <div class="card-meta">4 candidates · 4 rounds · 50,845 ballots</div>
+      <div class="card-candidates">
+        <span class="card-cand-dot"><span class="dot" style="background:#E07B39"></span>Golden</span>
+        <span class="card-cand-dot"><span class="dot" style="background:#3B7BC8"></span>St. Clair</span>
+        <span class="card-cand-dot"><span class="dot" style="background:#5BA85A"></span>Olson</span>
+        <span class="card-cand-dot"><span class="dot" style="background:#9B6BB5"></span>Fulford</span>
+      </div>
+      <div class="card-cta">EXPLORE MAP →</div>
+    </a>
+
+    <!-- 2026 CD2 Democratic Primary — coming soon -->
+    <div class="election-card coming-soon"
+         data-note="2026 CD2 Democratic Primary — Official cast vote records expected following RCV certification (est. late June 2026)."
+         onclick="showComingSoonTooltip(this)">
+      <div class="coming-soon-tooltip"></div>
+      <div class="card-year">2026</div>
+      <div class="card-race">CD2 Democratic Primary</div>
+      <div class="card-meta">Baldacci · Dunlap · Loud · Wood</div>
+      <div class="card-badge">COMING SOON</div>
+    </div>
+  </section>
+
+  <div class="about-section">
+    <h2>About This Project</h2>
+    <p>These maps visualize Maine's ranked-choice voting elections at the town level, showing how ballots transfer between candidates as rounds progress. Data is derived from official cast vote records (CVRs) published by the Maine Secretary of State.</p>
+    <p>The 2018 CD2 primary data is based on a ~2.4% CVR sample of 1,243 ballots, scaled to official district totals. Intermediate rounds are estimated from sample proportions. The 2026 data will use the full official CVR once released post-certification.</p>
+  </div>
+</main>
+
+<footer>
+  <span>Data: Maine Secretary of State &nbsp;·&nbsp; Built by Derek Lane &nbsp;·&nbsp; <a href="https://github.com/kingredbeard8" target="_blank">GitHub ↗</a></span>
+  <span class="footer-methodology">2018 CD2 data derived from ~2.4% cast vote record sample, scaled to official district totals.</span>
+</footer>
+
+<script>
+let activeTooltipCard = null;
+let tooltipTimeout = null;
+
+function showComingSoonTooltip(card) {
+  const note = card.dataset.note;
+  const tt = card.querySelector('.coming-soon-tooltip');
+  if (!tt) return;
+
+  // Dismiss any other open
+  if (activeTooltipCard && activeTooltipCard !== card) {
+    const other = activeTooltipCard.querySelector('.coming-soon-tooltip');
+    if (other) other.classList.remove('visible');
+  }
+
+  tt.textContent = note;
+  tt.classList.add('visible');
+  activeTooltipCard = card;
+
+  clearTimeout(tooltipTimeout);
+  tooltipTimeout = setTimeout(() => {
+    tt.classList.remove('visible');
+    activeTooltipCard = null;
+  }, 4000);
+}
+
+// Dismiss on click-away
+document.addEventListener('click', e => {
+  if (activeTooltipCard && !activeTooltipCard.contains(e.target)) {
+    const tt = activeTooltipCard.querySelector('.coming-soon-tooltip');
+    if (tt) tt.classList.remove('visible');
+    activeTooltipCard = null;
+    clearTimeout(tooltipTimeout);
+  }
+});
+</script>
+</body>
+</html>
