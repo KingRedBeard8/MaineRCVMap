@@ -92,14 +92,151 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; background: #0d0d10; co
 
 /* ── Mobile ──────────────────────────────────────── */
 @media (max-width: 768px) {
+  body { overflow: hidden; }
   #app { flex-direction: column; }
-  #sidebar { width: 100%; height: 180px; flex-direction: row; flex-wrap: wrap; overflow: hidden; }
-  #sidebar-header { flex: 1; min-width: 200px; }
-  #standings { display: none; }
-  #ballot-summary { display: none; }
-  #bottom-bar { height: 130px; }
-  #tooltip { bottom: 140px; }
+  /* sidebar hidden on mobile — replaced by info strip + bottom sheets */
+  #sidebar { display: none; }
+  #bottom-bar { display: none; }
+  /* desktop tooltip hidden on mobile */
+  #tooltip { display: none !important; }
+  /* map takes remaining height above mobile controls */
+  #map-container { flex: 1; min-height: 0; }
 }
+
+/* ── Mobile Info Strip ───────────────────────────── */
+#mobile-info-strip {
+  display: none;
+  background: #16161c;
+  border-top: 1px solid #2a2a36;
+  padding: 8px 14px;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+#mobile-strip-round { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #b8963c; margin-bottom: 4px; }
+#mobile-strip-bars { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.mobile-strip-cand { display: flex; align-items: center; gap: 4px; font-size: 11px; font-variant-numeric: tabular-nums; }
+.mobile-strip-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+.mobile-strip-name { color: #8888a4; }
+.mobile-strip-pct { color: #eaeaf2; font-weight: 700; }
+
+/* ── Mobile Round Nav ────────────────────────────── */
+#mobile-round-nav {
+  display: none;
+  background: #16161c;
+  border-top: 1px solid #2a2a36;
+  padding: 10px 14px;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+.mobile-nav-btn {
+  background: #1e1e26;
+  border: 1px solid #2a2a36;
+  color: #eaeaf2;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 9px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  min-width: 70px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  transition: background 0.15s;
+}
+.mobile-nav-btn:active { background: #2a2a36; }
+.mobile-nav-btn:disabled { opacity: 0.35; cursor: default; }
+.mobile-nav-btn.replay-btn { min-width: 56px; color: #b8963c; border-color: #b8963c44; }
+#mobile-round-label { font-size: 12px; font-weight: 700; color: #eaeaf2; text-align: center; flex: 1; }
+
+@media (max-width: 768px) {
+  #mobile-info-strip { display: block; }
+  #mobile-round-nav { display: flex; }
+}
+
+/* ── Town Bottom Sheet ───────────────────────────── */
+#town-sheet {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: #16161c;
+  border-top: 1px solid #2a2a36;
+  border-radius: 12px 12px 0 0;
+  z-index: 1100;
+  max-height: 60vh;
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform 0.28s cubic-bezier(0.32, 0.72, 0, 1);
+  -webkit-overflow-scrolling: touch;
+}
+#town-sheet.open { transform: translateY(0); }
+#town-sheet-handle { display: flex; justify-content: center; padding: 10px 0 4px; }
+#town-sheet-handle-bar { width: 40px; height: 4px; border-radius: 2px; background: #2a2a36; }
+#town-sheet-content { padding: 4px 18px 24px; }
+#ts-town-name { font-size: 18px; font-weight: 700; color: #b8963c; margin-bottom: 2px; }
+#ts-county { font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8888a4; margin-bottom: 12px; }
+.ts-cand-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.ts-cand-left { display: flex; align-items: center; gap: 7px; }
+.ts-cand-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.ts-cand-name { font-size: 12px; font-weight: 700; }
+.ts-cand-right { text-align: right; font-size: 12px; font-variant-numeric: tabular-nums; }
+.ts-cand-votes { font-weight: 700; color: #eaeaf2; }
+.ts-cand-pct { color: #8888a4; margin-left: 6px; }
+#ts-received-section { margin-top: 10px; padding-top: 10px; border-top: 1px solid #2a2a36; }
+#ts-recv-label { font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #8888a4; margin-bottom: 6px; }
+.ts-recv-row { display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px; font-variant-numeric: tabular-nums; color: #8888a4; }
+.ts-recv-name { font-weight: 600; }
+.ts-recv-val { color: #eaeaf2; }
+#ts-exhausted { margin-top: 6px; font-size: 11px; color: #8888a4; }
+#ts-nodata { font-size: 12px; color: #8888a4; font-style: italic; }
+#town-sheet-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; padding-top: 12px; border-top: 1px solid #2a2a36; }
+#ts-pin-btn, #ts-close-btn {
+  background: #1e1e26;
+  border: 1px solid #2a2a36;
+  color: #eaeaf2;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  border-radius: 3px;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+#ts-pin-btn.pinned { border-color: #b8963c; color: #b8963c; }
+#ts-close-btn { color: #8888a4; }
+
+/* ── Standings Bottom Sheet ──────────────────────── */
+#standings-sheet {
+  position: fixed;
+  bottom: 0; left: 0; right: 0;
+  background: #16161c;
+  border-top: 1px solid #2a2a36;
+  border-radius: 12px 12px 0 0;
+  z-index: 1200;
+  max-height: 70vh;
+  overflow-y: auto;
+  transform: translateY(100%);
+  transition: transform 0.28s cubic-bezier(0.32, 0.72, 0, 1);
+  -webkit-overflow-scrolling: touch;
+}
+#standings-sheet.open { transform: translateY(0); }
+#standings-sheet-handle { display: flex; justify-content: center; padding: 10px 0 4px; }
+#standings-sheet-handle-bar { width: 40px; height: 4px; border-radius: 2px; background: #2a2a36; }
+#standings-sheet-content { padding: 4px 18px 24px; }
+#ss-title { font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #8888a4; margin-bottom: 12px; }
+#ss-close { display: block; margin: 16px auto 0; background: #1e1e26; border: 1px solid #2a2a36; color: #8888a4; font-size: 10px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 8px 20px; border-radius: 3px; cursor: pointer; }
+
+/* ── Sheet backdrop ──────────────────────────────── */
+#sheet-backdrop {
+  display: none;
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.45);
+  z-index: 1050;
+}
+#sheet-backdrop.visible { display: block; }
 </style>
 </head>
 <body>
@@ -132,10 +269,51 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; background: #0d0d10; co
   </div>
 </div>
 
-<!-- Bottom Bar -->
+<!-- Bottom Bar (desktop) -->
 <div id="bottom-bar">
   <div id="stepper"></div>
   <div id="scrubber"><input type="range" id="scrubber-input" min="0" step="1" value="0"></div>
+</div>
+
+<!-- Mobile Info Strip -->
+<div id="mobile-info-strip">
+  <div id="mobile-strip-round">Round 1</div>
+  <div id="mobile-strip-bars"></div>
+</div>
+
+<!-- Mobile Round Navigation -->
+<div id="mobile-round-nav">
+  <button class="mobile-nav-btn" id="mob-prev-btn">&#8592; BACK</button>
+  <span id="mobile-round-label">Round 1 of 1</span>
+  <button class="mobile-nav-btn replay-btn" id="mob-replay-btn">&#8635;</button>
+  <button class="mobile-nav-btn" id="mob-next-btn">NEXT &#8594;</button>
+</div>
+
+<!-- Sheet backdrop -->
+<div id="sheet-backdrop"></div>
+
+<!-- Town Bottom Sheet -->
+<div id="town-sheet">
+  <div id="town-sheet-handle"><div id="town-sheet-handle-bar"></div></div>
+  <div id="town-sheet-content">
+    <div id="ts-town-name"></div>
+    <div id="ts-county"></div>
+    <div id="ts-body"></div>
+    <div id="town-sheet-footer">
+      <button id="ts-pin-btn">&#128204; PIN</button>
+      <button id="ts-close-btn">CLOSE &#10005;</button>
+    </div>
+  </div>
+</div>
+
+<!-- Standings Bottom Sheet -->
+<div id="standings-sheet">
+  <div id="standings-sheet-handle"><div id="standings-sheet-handle-bar"></div></div>
+  <div id="standings-sheet-content">
+    <div id="ss-title">District Standings</div>
+    <div id="ss-standings-body"></div>
+    <button id="ss-close">CLOSE</button>
+  </div>
 </div>
 
 <script>
@@ -591,6 +769,11 @@ function goToRound(round, animate) {
   updateMapColors(animate && !scrubbing);
   updateStandings();
   updateStepper();
+  if (isMobile()) {
+    updateMobileStrip();
+    updateTownSheetIfOpen();
+    if (standingsSheetOpen) buildStandingsSheetContent();
+  }
 }
 
 // Keyboard nav
@@ -646,6 +829,18 @@ function loadElection() {
   buildGeoLayer();
   updateMapColors(false);  // paint towns immediately after layer is built
   updateStandings();
+  // Mobile: re-wire handlers and update strip when election changes
+  if (isMobile()) {
+    setTimeout(() => {
+      if (geoLayer) {
+        geoLayer.eachLayer(layer => {
+          layer.off('mouseover mouseout click');
+          layer.on('click', handleMobileTownTap);
+        });
+      }
+      updateMobileStrip();
+    }, 50);
+  }
 }
 
 // ═══════════════════════════════════════════════════════════════════
@@ -676,7 +871,363 @@ async function init() {
 
   populateElectionSelect();
   loadElection();
+  if (isMobile()) {
+    setTimeout(() => {
+      if (geoLayer) {
+        geoLayer.eachLayer(layer => {
+          layer.off('mouseover mouseout click');
+          layer.on('click', handleMobileTownTap);
+        });
+      }
+      updateMobileStrip();
+    }, 100);
+  }
 }
+
+// ═══════════════════════════════════════════════════════════════════
+// MOBILE INTERACTION SYSTEM (Agent 2)
+// ═══════════════════════════════════════════════════════════════════
+
+const isMobile = () => window.innerWidth <= 768 || 'ontouchstart' in window;
+
+// Mobile state
+let selectedTown = null;
+let townSheetOpen = false;
+let standingsSheetOpen = false;
+let townPinned = false;
+
+// ── Mobile town bottom sheet ──────────────────────────────────────
+function buildTownSheetContent(townName) {
+  const name = townName.toUpperCase();
+  const town = electionData?.towns[name];
+  const body = document.getElementById('ts-body');
+  body.innerHTML = '';
+
+  document.getElementById('ts-town-name').textContent = townName;
+  document.getElementById('ts-county').textContent =
+    town?.county ? town.county + ' County' : '';
+
+  if (!town) {
+    body.innerHTML = '<div id="ts-nodata">No CVR data available</div>';
+    return;
+  }
+
+  const rd = town.rounds[String(currentRound)];
+  if (!rd) {
+    body.innerHTML = '<div id="ts-nodata">No data for this round</div>';
+    return;
+  }
+
+  const votes = rd.votes;
+  const total = rd.continuing || Object.values(votes).reduce((a,b)=>a+b,0);
+  const sorted = Object.entries(votes).sort((a,b)=>b[1]-a[1]);
+
+  for (const [candId, v] of sorted) {
+    const cand = electionData.meta.candidates.find(c=>c.id===candId);
+    if (!cand) continue;
+    const pct = total > 0 ? (v/total*100).toFixed(1) : '0.0';
+    const row = document.createElement('div');
+    row.className = 'ts-cand-row';
+    row.innerHTML = \`
+      <div class="ts-cand-left">
+        <div class="ts-cand-dot" style="background:\${cand.color}"></div>
+        <span class="ts-cand-name" style="color:\${cand.color}">\${cand.name}</span>
+      </div>
+      <div class="ts-cand-right">
+        <span class="ts-cand-votes">\${v.toLocaleString()}</span>
+        <span class="ts-cand-pct">\${pct}%</span>
+      </div>\`;
+    body.appendChild(row);
+  }
+
+  // RCV transfers received
+  if (currentRound > 1 && rd.received && Object.keys(rd.received).length > 0) {
+    const recvSec = document.createElement('div');
+    recvSec.id = 'ts-received-section';
+    const elimRound = electionData.meta.rounds.find(r=>r.round===currentRound);
+    const elimIdRaw = elimRound?.eliminated;
+    const elimIds = elimIdRaw ? (Array.isArray(elimIdRaw) ? elimIdRaw : [elimIdRaw]) : [];
+    const elimNames = elimIds.map(id=>electionData.meta.candidates.find(c=>c.id===id)?.name).filter(Boolean).join(' & ');
+    recvSec.innerHTML = \`<div id="ts-recv-label">Transfers from \${elimNames || 'eliminated'}</div>\`;
+    for (const [c, v] of Object.entries(rd.received)) {
+      if (!v || v === 0) continue;
+      const cand = electionData.meta.candidates.find(x=>x.id===c);
+      if (!cand) continue;
+      const rr = document.createElement('div');
+      rr.className = 'ts-recv-row';
+      rr.innerHTML = \`<span class="ts-recv-name" style="color:\${cand.color}">→ \${cand.name}</span><span class="ts-recv-val">+\${v.toLocaleString()}</span>\`;
+      recvSec.appendChild(rr);
+    }
+    body.appendChild(recvSec);
+  }
+
+  if (rd.exhausted > 0) {
+    const exh = document.createElement('div');
+    exh.id = 'ts-exhausted';
+    exh.textContent = 'Exhausted: ' + rd.exhausted.toLocaleString();
+    body.appendChild(exh);
+  }
+}
+
+function openTownSheet(townName) {
+  selectedTown = townName;
+  townSheetOpen = true;
+  buildTownSheetContent(townName);
+  document.getElementById('town-sheet').classList.add('open');
+  // Update pin button state
+  document.getElementById('ts-pin-btn').classList.toggle('pinned', townPinned);
+  showBackdrop('town');
+}
+
+function closeTownSheet() {
+  townSheetOpen = false;
+  townPinned = false;
+  selectedTown = null;
+  document.getElementById('town-sheet').classList.remove('open');
+  document.getElementById('ts-pin-btn').classList.remove('pinned');
+  hideBackdrop();
+}
+
+function updateTownSheetIfOpen() {
+  if (townSheetOpen && selectedTown) {
+    buildTownSheetContent(selectedTown);
+  }
+}
+
+// ── Mobile standings bottom sheet ─────────────────────────────────
+function buildStandingsSheetContent() {
+  const meta = electionData?.meta;
+  if (!meta) return;
+  const body = document.getElementById('ss-standings-body');
+  body.innerHTML = '';
+
+  const totals = meta.district_totals[String(currentRound)] || {};
+  const prevTotals = currentRound > 1 ? (meta.district_totals[String(currentRound-1)] || {}) : {};
+  const continuing = Object.values(totals).reduce((a,b)=>a+b,0);
+  const sorted = Object.entries(totals).sort((a,b)=>b[1]-a[1]);
+  const elimSoFar = meta.rounds.filter(r=>r.round<currentRound&&r.eliminated).map(r=>r.eliminated).flat();
+
+  for (const [candId, votes] of sorted) {
+    const cand = meta.candidates.find(c=>c.id===candId);
+    if (!cand) continue;
+    const pct = continuing > 0 ? (votes/continuing*100).toFixed(1) : '0.0';
+    const prev = prevTotals[candId] || 0;
+    const delta = votes - prev;
+    const isElim = elimSoFar.includes(candId);
+    const roundInfo = meta.rounds.find(r=>r.round===currentRound);
+    const isWinner = roundInfo?.winner === candId;
+
+    const row = document.createElement('div');
+    row.className = 'cand-row' + (isElim ? ' eliminated' : '');
+    let badge = '';
+    if (isElim) badge = '<span class="cand-badge badge-elim">Eliminated</span>';
+    if (isWinner) badge = '<span class="cand-badge badge-winner">Winner</span>';
+    let deltaHtml = '';
+    if (currentRound > 1 && !isElim) {
+      const sign = delta >= 0 ? '+' : '';
+      const arrow = delta >= 0 ? '▲' : '▼';
+      deltaHtml = \`<span class="cand-delta" style="color:\${cand.color}">\${sign}\${delta.toLocaleString()} \${arrow}</span>\`;
+    }
+    const barWidth = continuing > 0 ? (votes/continuing*100).toFixed(1) : 0;
+    row.innerHTML = \`
+      <div class="cand-name-row">
+        <span class="cand-name\${isElim?' elim-text':''}" style="color:\${cand.color}">\${cand.name}</span>
+        \${badge}
+      </div>
+      <div class="cand-bar-bg"><div class="cand-bar" style="width:\${barWidth}%;background:\${cand.color}"></div></div>
+      <div class="cand-stats">
+        <span class="cand-total">\${votes.toLocaleString()}</span>
+        <span class="cand-pct">\${pct}%</span>
+        \${deltaHtml}
+      </div>\`;
+    body.appendChild(row);
+  }
+}
+
+function openStandingsSheet() {
+  standingsSheetOpen = true;
+  buildStandingsSheetContent();
+  document.getElementById('standings-sheet').classList.add('open');
+  showBackdrop('standings');
+}
+
+function closeStandingsSheet() {
+  standingsSheetOpen = false;
+  document.getElementById('standings-sheet').classList.remove('open');
+  if (!townSheetOpen) hideBackdrop();
+}
+
+// ── Backdrop ──────────────────────────────────────────────────────
+let backdropFor = null;
+function showBackdrop(forSheet) {
+  backdropFor = forSheet;
+  document.getElementById('sheet-backdrop').classList.add('visible');
+}
+function hideBackdrop() {
+  backdropFor = null;
+  document.getElementById('sheet-backdrop').classList.remove('visible');
+}
+
+document.getElementById('sheet-backdrop').addEventListener('click', () => {
+  if (standingsSheetOpen) closeStandingsSheet();
+  else if (townSheetOpen) closeTownSheet();
+});
+
+// ── Mobile info strip ─────────────────────────────────────────────
+function updateMobileStrip() {
+  if (!electionData) return;
+  const meta = electionData.meta;
+  const totals = meta.district_totals[String(currentRound)] || {};
+  const continuing = Object.values(totals).reduce((a,b)=>a+b,0);
+  const roundInfo = meta.rounds.find(r=>r.round===currentRound);
+  const elimIdRaw = roundInfo?.eliminated;
+  const elimIds = elimIdRaw ? (Array.isArray(elimIdRaw)?elimIdRaw:[elimIdRaw]) : [];
+  const elimNames = elimIds.map(id=>meta.candidates.find(c=>c.id===id)?.name).filter(Boolean).join(' & ');
+
+  let stripLabel = 'ROUND ' + currentRound;
+  if (elimNames) stripLabel += ' — ' + elimNames + ' eliminated';
+  else if (roundInfo?.winner) {
+    const w = meta.candidates.find(c=>c.id===roundInfo.winner);
+    if (w) stripLabel += ' — ' + w.name + ' WINS';
+  }
+  document.getElementById('mobile-strip-round').textContent = stripLabel;
+
+  const barsEl = document.getElementById('mobile-strip-bars');
+  barsEl.innerHTML = '';
+  const sorted = Object.entries(totals).sort((a,b)=>b[1]-a[1]);
+  for (const [candId, votes] of sorted) {
+    const cand = meta.candidates.find(c=>c.id===candId);
+    if (!cand) continue;
+    const pct = continuing > 0 ? (votes/continuing*100).toFixed(1) : '0.0';
+    const el = document.createElement('div');
+    el.className = 'mobile-strip-cand';
+    el.innerHTML = \`<div class="mobile-strip-dot" style="background:\${cand.color}"></div><span class="mobile-strip-name">\${cand.name.split(' ').pop()}</span><span class="mobile-strip-pct"> \${pct}%</span>\`;
+    barsEl.appendChild(el);
+  }
+
+  // round nav
+  const rounds = meta.rounds;
+  document.getElementById('mobile-round-label').textContent =
+    'Round ' + currentRound + ' of ' + rounds.length;
+  document.getElementById('mob-prev-btn').disabled = currentRound <= 1;
+  document.getElementById('mob-next-btn').disabled = currentRound >= rounds.length;
+}
+
+// ── Mobile Geo layer touch handler ────────────────────────────────
+function handleMobileTownTap(e) {
+  const props = e.target.feature.properties;
+  const townName = props.NAME;
+  if (townSheetOpen && selectedTown === townName) {
+    // Same town — just update; don't close/reopen
+    buildTownSheetContent(townName);
+    return;
+  }
+  // New town — update or open
+  openTownSheet(townName);
+}
+
+function handleDesktopHover(e) {
+  showTooltip(e.target.feature.properties);
+}
+function handleDesktopLeave() {
+  hideTooltip();
+}
+function handleDesktopMove(e) {
+  // tooltip follows cursor on desktop — already handled by showTooltip
+}
+function handleDesktopClick(e) {
+  // desktop click: no-op (tooltip already showing)
+}
+
+// Override buildGeoLayer to add split desktop/mobile handlers
+const _origBuildGeoLayer = buildGeoLayer;
+function buildGeoLayerWithMobileHandlers() {
+  _origBuildGeoLayer();
+  // Re-attach handlers after geo layer is rebuilt
+  if (geoLayer) {
+    geoLayer.eachLayer(layer => {
+      // Remove old listeners
+      layer.off('mouseover mousemove mouseout click');
+      if (isMobile()) {
+        layer.on('click', handleMobileTownTap);
+      } else {
+        layer.on({
+          mouseover: e => showTooltip(e.target.feature.properties),
+          mouseout: hideTooltip,
+          click: e => showTooltip(e.target.feature.properties)
+        });
+      }
+    });
+  }
+}
+
+// Hook into goToRound to also update mobile UI
+const _origGoToRound = goToRound;
+function goToRoundWithMobile(round, animate) {
+  _origGoToRound(round, animate);
+  if (isMobile()) {
+    updateMobileStrip();
+    updateTownSheetIfOpen();
+    if (standingsSheetOpen) buildStandingsSheetContent();
+  }
+}
+
+// ── Mobile nav button wiring ──────────────────────────────────────
+document.getElementById('mob-prev-btn').addEventListener('click', () => {
+  goToRoundWithMobile(currentRound - 1, false);
+});
+document.getElementById('mob-next-btn').addEventListener('click', () => {
+  goToRoundWithMobile(currentRound + 1, true);
+});
+document.getElementById('mob-replay-btn').addEventListener('click', () => {
+  goToRoundWithMobile(currentRound, true);
+});
+document.getElementById('mobile-info-strip').addEventListener('click', () => {
+  openStandingsSheet();
+});
+document.getElementById('ts-close-btn').addEventListener('click', closeTownSheet);
+document.getElementById('ts-pin-btn').addEventListener('click', () => {
+  townPinned = !townPinned;
+  document.getElementById('ts-pin-btn').classList.toggle('pinned', townPinned);
+});
+document.getElementById('ss-close').addEventListener('click', closeStandingsSheet);
+
+// ── Patch loadElection to add mobile setup ────────────────────────
+const _origLoadElection = loadElection;
+function loadElectionWithMobile() {
+  _origLoadElection();
+  if (isMobile()) {
+    // Re-attach mobile touch handlers after geo layer rebuilt
+    setTimeout(() => {
+      if (geoLayer) {
+        geoLayer.eachLayer(layer => {
+          layer.off('mouseover mousemove mouseout click');
+          layer.on('click', handleMobileTownTap);
+        });
+      }
+      updateMobileStrip();
+    }, 50);
+  }
+}
+
+// ── Resize handler ────────────────────────────────────────────────
+window.addEventListener('resize', () => {
+  if (geoLayer) {
+    geoLayer.eachLayer(layer => {
+      layer.off('mouseover mouseout click');
+      if (isMobile()) {
+        layer.on('click', handleMobileTownTap);
+      } else {
+        layer.on({
+          mouseover: e => showTooltip(e.target.feature.properties),
+          mouseout: hideTooltip,
+          click: e => showTooltip(e.target.feature.properties)
+        });
+      }
+    });
+  }
+});
+
 
 init();
 </script>
