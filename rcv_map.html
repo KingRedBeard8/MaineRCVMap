@@ -11,12 +11,26 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: "Helvetica Neue", Arial, sans-serif; background: #0d0d10; color: #eaeaf2; height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
 
-/* ── Layout ─────────────────────────────────────── */
-#app { display: flex; flex: 1; overflow: hidden; }
+/* ── Layout — mobile-first base ───────────── */
+#app { display: flex; flex: 1; overflow: hidden; flex-direction: column; }
 #map-container { flex: 1; position: relative; }
 #map { width: 100%; height: 100%; }
-#sidebar { width: 320px; background: #16161c; border-left: 1px solid #2a2a36; display: flex; flex-direction: column; overflow: hidden; }
-#bottom-bar { height: 110px; background: #16161c; border-top: 1px solid #2a2a36; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 10px 24px; gap: 8px; }
+/* On mobile push map content above fixed bottom controls */
+@media (max-width: 768px) {
+  #map-container { padding-bottom: 108px; }
+  .leaflet-bottom { bottom: 108px; }
+}
+#sidebar { display: none; }
+#bottom-bar { display: none; }
+#tooltip { display: none; }
+
+/* ── Desktop layout (769px+) ───────────────── */
+@media (min-width: 769px) {
+  #app { flex-direction: row; }
+  #sidebar { display: flex; width: 320px; background: #16161c; border-left: 1px solid #2a2a36; flex-direction: column; overflow: hidden; }
+  #bottom-bar { display: flex; height: 110px; background: #16161c; border-top: 1px solid #2a2a36; flex-direction: column; align-items: center; justify-content: center; padding: 10px 24px; gap: 8px; }
+  #tooltip { display: block; }
+}
 
 /* ── Sidebar ─────────────────────────────────────── */
 #sidebar-header { padding: 14px 16px 10px; border-bottom: 1px solid #2a2a36; }
@@ -93,35 +107,23 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; background: #0d0d10; co
   .leaflet-control-attribution { display: none !important; }
 }
 
-/* ── Mobile ──────────────────────────────────────── */
-@media (max-width: 768px) {
-  body { overflow: hidden; }
-  #app { flex-direction: column; }
-  #sidebar { display: none; }
-  #bottom-bar { display: none; }
-  #tooltip { display: none !important; }
-  /* map fills full screen, bottom padding makes room for fixed controls */
-  #map-container { flex: 1; }
-  #map { height: calc(100vh - 105px); }
-
-  /* pin info strip + round nav to bottom of screen */
-  #mobile-info-strip {
-    position: fixed;
-    bottom: 58px;
-    left: 0; right: 0;
-    z-index: 500;
-  }
-  #mobile-round-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0; right: 0;
-    z-index: 500;
-  }
+/* ── Mobile controls — always fixed at bottom ─────── */
+#mobile-info-strip {
+  position: fixed;
+  bottom: 58px;
+  left: 0; right: 0;
+  z-index: 500;
+}
+#mobile-round-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0; right: 0;
+  z-index: 500;
 }
 
 /* ── Mobile Info Strip ───────────────────────────── */
 #mobile-info-strip {
-  display: none;
+  display: block;
   background: #16161c;
   border-top: 1px solid #2a2a36;
   padding: 8px 14px;
@@ -138,7 +140,7 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; background: #0d0d10; co
 
 /* ── Mobile Round Nav ────────────────────────────── */
 #mobile-round-nav {
-  display: none;
+  display: flex;
   background: #16161c;
   border-top: 1px solid #2a2a36;
   padding: 10px 14px;
@@ -168,9 +170,9 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; background: #0d0d10; co
 .mobile-nav-btn.replay-btn { min-width: 56px; color: #b8963c; border-color: #b8963c44; }
 #mobile-round-label { font-size: 12px; font-weight: 700; color: #eaeaf2; text-align: center; flex: 1; }
 
-@media (max-width: 768px) {
-  #mobile-info-strip { display: block; }
-  #mobile-round-nav { display: flex; }
+@media (min-width: 769px) {
+  #mobile-info-strip { display: none !important; }
+  #mobile-round-nav { display: none !important; }
 }
 
 /* ── Town Bottom Sheet ───────────────────────────── */
@@ -254,17 +256,20 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; background: #0d0d10; co
 }
 #sheet-backdrop.visible { display: block; }
 
-/* ── Agent 3: Story Mode ─────────────────────────────────────── */
+/* ── Agent 3: Story Mode ────────────────────── */
+/* Mobile-first: card fills most of the viewport, buttons are large tap targets */
 #story-overlay {
   position: fixed; inset: 0;
   background: rgba(13,13,16,0.92);
   backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   z-index: 2000;
   display: flex;
-  align-items: center;
+  align-items: flex-end;  /* sheet slides up from bottom on mobile */
   justify-content: center;
   opacity: 1;
   transition: opacity 0.35s ease;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 #story-overlay.hidden { display: none; }
 #story-overlay.fading { opacity: 0; pointer-events: none; }
@@ -272,86 +277,140 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; background: #0d0d10; co
 .story-card {
   background: #16161c;
   border: 1px solid #2a2a36;
-  border-radius: 8px;
-  padding: 36px 40px;
-  max-width: 520px;
-  width: calc(100% - 48px);
+  border-radius: 16px 16px 0 0;
+  padding: 20px 20px 28px;
+  width: 100%;
+  max-width: 100%;
   text-align: center;
-  box-shadow: 0 24px 64px rgba(0,0,0,0.7);
+  box-shadow: 0 -12px 48px rgba(0,0,0,0.6);
+  /* handle bar at top */
+  position: relative;
 }
+.story-card::before {
+  content: '';
+  display: block;
+  width: 40px; height: 4px;
+  background: #2a2a36;
+  border-radius: 2px;
+  margin: 0 auto 16px;
+}
+
 .story-eyebrow {
   font-size: 10px; font-weight: 700;
   letter-spacing: 0.18em; text-transform: uppercase;
-  color: #b8963c; margin-bottom: 14px;
+  color: #b8963c; margin-bottom: 10px;
 }
 .story-title {
-  font-size: clamp(20px,4vw,28px); font-weight: 700;
+  font-size: 22px; font-weight: 700;
   letter-spacing: -0.02em; color: #eaeaf2;
-  margin-bottom: 16px; line-height: 1.25;
+  margin-bottom: 12px; line-height: 1.2;
 }
 .story-divider {
   height: 2px;
   background: linear-gradient(90deg,transparent,#b8963c,transparent);
-  margin: 0 auto 20px; width: 60px;
+  margin: 0 auto 16px; width: 48px;
 }
 .story-body {
-  font-size: 13px; color: #8888a4; line-height: 1.7; margin-bottom: 20px;
+  font-size: 14px; color: #8888a4; line-height: 1.65; margin-bottom: 16px;
 }
 .story-body strong { color: #eaeaf2; }
-.story-meta { font-size: 11px; color: #8888a4; letter-spacing: 0.06em; margin-bottom: 22px; }
+.story-meta { font-size: 11px; color: #8888a4; letter-spacing: 0.06em; margin-bottom: 18px; }
+
 .story-candidates {
   display: flex; flex-wrap: wrap;
-  justify-content: center; gap: 10px 16px; margin-bottom: 28px;
+  justify-content: center; gap: 10px 14px; margin-bottom: 22px;
 }
-.story-cand-pill { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 700; color: #eaeaf2; }
-.story-cand-dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; }
+.story-cand-pill { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 700; color: #eaeaf2; }
+.story-cand-dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
 .story-transfer-row {
   display: flex; justify-content: space-between; align-items: center;
-  margin-bottom: 7px; font-size: 12px; font-variant-numeric: tabular-nums;
+  margin-bottom: 8px; font-size: 13px; font-variant-numeric: tabular-nums;
 }
 .str-name { color: #8888a4; }
-.str-bar-wrap { flex: 1; margin: 0 10px; height: 4px; background: #1e1e26; border-radius: 2px; overflow: hidden; }
-.str-bar { height: 100%; border-radius: 2px; }
-.str-val { color: #eaeaf2; font-weight: 600; min-width: 32px; text-align: right; }
-.story-btn {
-  display: inline-block; background: #b8963c; color: #0d0d10;
-  font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
-  padding: 10px 24px; border-radius: 4px; border: none; cursor: pointer;
-  transition: background 0.15s; margin-top: 4px;
-}
-.story-btn:hover { background: #d4a843; }
-.story-btn.secondary {
-  background: #1e1e26; color: #eaeaf2; border: 1px solid #2a2a36; margin-left: 10px;
-}
-.story-btn.secondary:hover { background: #2a2a36; }
-.story-skip {
-  margin-top: 14px; font-size: 10px; color: #2a2a36; cursor: pointer;
-  letter-spacing: 0.08em; text-transform: uppercase; transition: color 0.15s;
-}
-.story-skip:hover { color: #8888a4; }
+.str-bar-wrap { flex: 1; margin: 0 10px; height: 5px; background: #1e1e26; border-radius: 3px; overflow: hidden; }
+.str-bar { height: 100%; border-radius: 3px; }
+.str-val { color: #eaeaf2; font-weight: 600; min-width: 40px; text-align: right; }
 
-/* Post-round summary strip */
+/* Buttons: full-width, 48px+ tap targets */
+.story-buttons { display: flex; flex-direction: column; gap: 10px; margin-top: 8px; }
+.story-btn {
+  display: block; width: 100%;
+  background: #b8963c; color: #0d0d10;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 14px 20px; border-radius: 6px; border: none; cursor: pointer;
+  transition: background 0.15s;
+  -webkit-tap-highlight-color: transparent;
+  min-height: 48px;
+}
+.story-btn:active { background: #d4a843; }
+.story-btn.secondary {
+  background: #1e1e26; color: #eaeaf2; border: 1px solid #2a2a36;
+}
+.story-btn.secondary:active { background: #2a2a36; }
+.story-skip {
+  margin-top: 12px; font-size: 11px; color: #3a3a4a; cursor: pointer;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 8px; display: block;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Post-round summary strip — sits above mobile nav (58px) + info strip (~50px) */
 #story-summary-strip {
-  position: fixed; bottom: 120px; left: 50%; transform: translateX(-50%);
-  background: #16161c; border: 1px solid #2a2a36; border-radius: 6px;
-  padding: 12px 20px; max-width: 420px; width: calc(100% - 48px);
-  z-index: 700; display: none; box-shadow: 0 8px 28px rgba(0,0,0,.5);
-  text-align: center; animation: storySummaryIn 0.3s ease forwards;
+  position: fixed;
+  bottom: calc(116px + env(safe-area-inset-bottom, 0px));
+  left: 12px; right: 12px;
+  background: #16161c;
+  border: 1px solid #2a2a36;
+  border-radius: 8px;
+  padding: 14px 16px 12px;
+  z-index: 700;
+  display: none;
+  box-shadow: 0 8px 28px rgba(0,0,0,.5);
+  text-align: center;
+  animation: storySummaryIn 0.3s ease forwards;
 }
 #story-summary-strip.visible { display: block; }
-#story-summary-text { font-size: 12px; color: #8888a4; line-height: 1.5; }
+#story-summary-text { font-size: 13px; color: #8888a4; line-height: 1.5; }
 #story-summary-text strong { color: #eaeaf2; }
 #story-summary-dismiss {
-  margin-top: 8px; font-size: 10px; color: #b8963c;
+  margin-top: 10px;
+  font-size: 11px; color: #b8963c;
   cursor: pointer; letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 8px 0;
+  display: block;
+  -webkit-tap-highlight-color: transparent;
 }
+
 @keyframes storySummaryIn {
-  from { opacity: 0; transform: translate(-50%, 8px); }
-  to   { opacity: 1; transform: translate(-50%, 0); }
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
-@media (max-width: 768px) {
-  .story-card { padding: 24px 20px; }
-  #story-summary-strip { bottom: 160px; }
+
+/* Desktop overrides — centered floating card */
+@media (min-width: 769px) {
+  #story-overlay {
+    align-items: center;
+    padding-bottom: 0;
+  }
+  .story-card {
+    border-radius: 8px;
+    padding: 36px 40px;
+    max-width: 520px;
+    box-shadow: 0 24px 64px rgba(0,0,0,0.7);
+  }
+  .story-card::before { display: none; }
+  .story-title { font-size: 28px; }
+  .story-body { font-size: 13px; }
+  .story-buttons { flex-direction: row; justify-content: center; }
+  .story-btn { width: auto; display: inline-block; padding: 10px 24px; }
+  .story-btn.secondary { margin-left: 0; }
+  #story-summary-strip {
+    bottom: 48px;
+    left: 50%; right: auto;
+    transform: translateX(-50%);
+    width: 420px;
+  }
 }
 </style>
 </head>
@@ -1347,7 +1406,7 @@ function showTitleCard() {
     <div class="story-body">${intro}</div>
     <div class="story-meta">${fmt(meta.total_ballots)} ballots &nbsp;·&nbsp; ${meta.candidates.length} candidates &nbsp;·&nbsp; ${meta.rounds.length} rounds</div>
     <div class="story-candidates">${cands}</div>
-    <button class="story-btn" id="story-begin-btn">BEGIN THE COUNT →</button>
+    <div class="story-buttons"><button class="story-btn" id="story-begin-btn">BEGIN THE COUNT →</button></div>
     <div class="story-skip" id="story-skip-btn">Skip intro</div>
   `;
   const overlay = document.getElementById('story-overlay');
@@ -1428,8 +1487,7 @@ function showPreRoundCard(round) {
     <div class="story-divider"></div>
     <div class="story-body">${body || ''}</div>
     ${transferHTML}
-    <button class="story-btn" id="story-show-btn">SHOW ME →</button>
-    ${round > 1 ? `<button class="story-btn secondary" id="story-back-btn">← BACK</button>` : ''}
+    <div class="story-buttons"><button class="story-btn" id="story-show-btn">SHOW ME →</button>${round > 1 ? `<button class="story-btn secondary" id="story-back-btn">← BACK</button>` : ''}</div>
   `;
   const overlay = document.getElementById('story-overlay');
   overlay.classList.remove('hidden', 'fading');
