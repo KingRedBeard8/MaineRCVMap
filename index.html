@@ -913,15 +913,15 @@ function buildTownSheetContent(townName) {
     const pct = total > 0 ? (v/total*100).toFixed(1) : '0.0';
     const row = document.createElement('div');
     row.className = 'ts-cand-row';
-    row.innerHTML = \`
+    row.innerHTML = `
       <div class="ts-cand-left">
-        <div class="ts-cand-dot" style="background:\${cand.color}"></div>
-        <span class="ts-cand-name" style="color:\${cand.color}">\${cand.name}</span>
+        <div class="ts-cand-dot" style="background:${cand.color}"></div>
+        <span class="ts-cand-name" style="color:${cand.color}">${cand.name}</span>
       </div>
       <div class="ts-cand-right">
-        <span class="ts-cand-votes">\${v.toLocaleString()}</span>
-        <span class="ts-cand-pct">\${pct}%</span>
-      </div>\`;
+        <span class="ts-cand-votes">${v.toLocaleString()}</span>
+        <span class="ts-cand-pct">${pct}%</span>
+      </div>`;
     body.appendChild(row);
   }
 
@@ -933,14 +933,14 @@ function buildTownSheetContent(townName) {
     const elimIdRaw = elimRound?.eliminated;
     const elimIds = elimIdRaw ? (Array.isArray(elimIdRaw) ? elimIdRaw : [elimIdRaw]) : [];
     const elimNames = elimIds.map(id=>electionData.meta.candidates.find(c=>c.id===id)?.name).filter(Boolean).join(' & ');
-    recvSec.innerHTML = \`<div id="ts-recv-label">Transfers from \${elimNames || 'eliminated'}</div>\`;
+    recvSec.innerHTML = `<div id="ts-recv-label">Transfers from ${elimNames || 'eliminated'}</div>`;
     for (const [c, v] of Object.entries(rd.received)) {
       if (!v || v === 0) continue;
       const cand = electionData.meta.candidates.find(x=>x.id===c);
       if (!cand) continue;
       const rr = document.createElement('div');
       rr.className = 'ts-recv-row';
-      rr.innerHTML = \`<span class="ts-recv-name" style="color:\${cand.color}">→ \${cand.name}</span><span class="ts-recv-val">+\${v.toLocaleString()}</span>\`;
+      rr.innerHTML = `<span class="ts-recv-name" style="color:${cand.color}">→ ${cand.name}</span><span class="ts-recv-val">+${v.toLocaleString()}</span>`;
       recvSec.appendChild(rr);
     }
     body.appendChild(recvSec);
@@ -1011,20 +1011,20 @@ function buildStandingsSheetContent() {
     if (currentRound > 1 && !isElim) {
       const sign = delta >= 0 ? '+' : '';
       const arrow = delta >= 0 ? '▲' : '▼';
-      deltaHtml = \`<span class="cand-delta" style="color:\${cand.color}">\${sign}\${delta.toLocaleString()} \${arrow}</span>\`;
+      deltaHtml = `<span class="cand-delta" style="color:${cand.color}">${sign}${delta.toLocaleString()} ${arrow}</span>`;
     }
     const barWidth = continuing > 0 ? (votes/continuing*100).toFixed(1) : 0;
-    row.innerHTML = \`
+    row.innerHTML = `
       <div class="cand-name-row">
-        <span class="cand-name\${isElim?' elim-text':''}" style="color:\${cand.color}">\${cand.name}</span>
-        \${badge}
+        <span class="cand-name${isElim?' elim-text':''}" style="color:${cand.color}">${cand.name}</span>
+        ${badge}
       </div>
-      <div class="cand-bar-bg"><div class="cand-bar" style="width:\${barWidth}%;background:\${cand.color}"></div></div>
+      <div class="cand-bar-bg"><div class="cand-bar" style="width:${barWidth}%;background:${cand.color}"></div></div>
       <div class="cand-stats">
-        <span class="cand-total">\${votes.toLocaleString()}</span>
-        <span class="cand-pct">\${pct}%</span>
-        \${deltaHtml}
-      </div>\`;
+        <span class="cand-total">${votes.toLocaleString()}</span>
+        <span class="cand-pct">${pct}%</span>
+        ${deltaHtml}
+      </div>`;
     body.appendChild(row);
   }
 }
@@ -1086,7 +1086,7 @@ function updateMobileStrip() {
     const pct = continuing > 0 ? (votes/continuing*100).toFixed(1) : '0.0';
     const el = document.createElement('div');
     el.className = 'mobile-strip-cand';
-    el.innerHTML = \`<div class="mobile-strip-dot" style="background:\${cand.color}"></div><span class="mobile-strip-name">\${cand.name.split(' ').pop()}</span><span class="mobile-strip-pct"> \${pct}%</span>\`;
+    el.innerHTML = `<div class="mobile-strip-dot" style="background:${cand.color}"></div><span class="mobile-strip-name">${cand.name.split(' ').pop()}</span><span class="mobile-strip-pct"> ${pct}%</span>`;
     barsEl.appendChild(el);
   }
 
