@@ -94,13 +94,26 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; background: #0d0d10; co
 @media (max-width: 768px) {
   body { overflow: hidden; }
   #app { flex-direction: column; }
-  /* sidebar hidden on mobile — replaced by info strip + bottom sheets */
   #sidebar { display: none; }
   #bottom-bar { display: none; }
-  /* desktop tooltip hidden on mobile */
   #tooltip { display: none !important; }
-  /* map takes remaining height above mobile controls */
-  #map-container { flex: 1; min-height: 0; }
+  /* map fills full screen, bottom padding makes room for fixed controls */
+  #map-container { flex: 1; }
+  #map { height: calc(100vh - 105px); }
+
+  /* pin info strip + round nav to bottom of screen */
+  #mobile-info-strip {
+    position: fixed;
+    bottom: 58px;
+    left: 0; right: 0;
+    z-index: 500;
+  }
+  #mobile-round-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0; right: 0;
+    z-index: 500;
+  }
 }
 
 /* ── Mobile Info Strip ───────────────────────────── */
@@ -836,8 +849,14 @@ function loadElection() {
   buildGeoLayer();
   updateMapColors(false);  // paint towns immediately after layer is built
   updateStandings();
-  // Mobile: update strip when election changes
-  if (isMobile()) { setTimeout(() => updateMobileStrip(), 50); }
+  if (isMobile()) {
+    // Invalidate size first so Leaflet knows the map height changed, then fit bounds
+    setTimeout(() => {
+      map.invalidateSize();
+      try { map.fitBounds(geoLayer.getBounds(), { padding: [10, 10] }); } catch(e) {}
+    }, 50);
+    updateMobileStrip();
+  }
 }
 
 // ═══════════════════════════════════════════════════════════════════
@@ -868,7 +887,6 @@ async function init() {
 
   populateElectionSelect();
   loadElection();
-  if (isMobile()) { setTimeout(() => updateMobileStrip(), 100); }
 }
 
 // ═══════════════════════════════════════════════════════════════════
