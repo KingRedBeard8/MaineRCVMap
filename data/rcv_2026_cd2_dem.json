@@ -1,0 +1,5478 @@
+{
+  "meta": {
+    "id": "2026_cd2_dem",
+    "race": "ME-CD2 Democratic Primary",
+    "year": 2026,
+    "total_ballots": 75720,
+    "data_note": "Unofficial election-night results by town. Round 1 first-choice only \u2014 full ranked-choice tabulation pending release of the official Cast Vote Record.",
+    "candidates": [
+      {
+        "id": "baldacci",
+        "name": "Baldacci",
+        "color": "#3B7BC8"
+      },
+      {
+        "id": "dunlap",
+        "name": "Dunlap",
+        "color": "#5BA85A"
+      },
+      {
+        "id": "wood",
+        "name": "Wood",
+        "color": "#E07B39"
+      },
+      {
+        "id": "loud",
+        "name": "Loud",
+        "color": "#9B6BB5"
+      }
+    ],
+    "rounds": [
+      {
+        "round": 1,
+        "label": "Election Night (R1)",
+        "eliminated": null,
+        "winner": null
+      }
+    ],
+    "district_totals": {
+      "1": {
+        "baldacci": 23944,
+        "dunlap": 21898,
+        "wood": 21711,
+        "loud": 8169
+      }
+    }
+  },
+  "towns": {
+    "ABBOT": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 17,
+            "dunlap": 18,
+            "wood": 15,
+            "loud": 5
+          },
+          "leader": "dunlap",
+          "continuing": 55,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ADDISON": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 43,
+            "dunlap": 31,
+            "wood": 43,
+            "loud": 4
+          },
+          "leader": "baldacci",
+          "continuing": 121,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ALBANY TWP": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 28,
+            "dunlap": 19,
+            "wood": 30,
+            "loud": 11
+          },
+          "leader": "wood",
+          "continuing": 88,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ALEXANDER": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 11,
+            "dunlap": 5,
+            "wood": 11,
+            "loud": 3
+          },
+          "leader": "baldacci",
+          "continuing": 30,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ALLAGASH": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 11,
+            "dunlap": 4,
+            "wood": 11,
+            "loud": 3
+          },
+          "leader": "baldacci",
+          "continuing": 29,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ALTON": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 20,
+            "dunlap": 34,
+            "wood": 5,
+            "loud": 6
+          },
+          "leader": "dunlap",
+          "continuing": 65,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "AMITY": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 4,
+            "dunlap": 4,
+            "wood": 5,
+            "loud": 0
+          },
+          "leader": "wood",
+          "continuing": 13,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ANDOVER": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 37,
+            "dunlap": 20,
+            "wood": 33,
+            "loud": 2
+          },
+          "leader": "baldacci",
+          "continuing": 92,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ANSON": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 46,
+            "dunlap": 36,
+            "wood": 52,
+            "loud": 15
+          },
+          "leader": "wood",
+          "continuing": 149,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ASHLAND": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 22,
+            "dunlap": 20,
+            "wood": 11,
+            "loud": 3
+          },
+          "leader": "baldacci",
+          "continuing": 56,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ATHENS": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 27,
+            "dunlap": 13,
+            "wood": 22,
+            "loud": 8
+          },
+          "leader": "baldacci",
+          "continuing": 70,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "AUBURN": {
+      "county": "Androscoggin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 640,
+            "dunlap": 462,
+            "wood": 1318,
+            "loud": 281
+          },
+          "leader": "wood",
+          "continuing": 2701,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "AUGUSTA": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 732,
+            "dunlap": 713,
+            "wood": 720,
+            "loud": 276
+          },
+          "leader": "baldacci",
+          "continuing": 2441,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "AVON": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 18,
+            "dunlap": 8,
+            "wood": 10,
+            "loud": 0
+          },
+          "leader": "baldacci",
+          "continuing": 36,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BAILEYVILLE": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 26,
+            "dunlap": 18,
+            "wood": 21,
+            "loud": 6
+          },
+          "leader": "baldacci",
+          "continuing": 71,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BANGOR": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 1675,
+            "dunlap": 1140,
+            "wood": 630,
+            "loud": 515
+          },
+          "leader": "baldacci",
+          "continuing": 3960,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BAR HARBOR": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 323,
+            "dunlap": 755,
+            "wood": 263,
+            "loud": 197
+          },
+          "leader": "dunlap",
+          "continuing": 1538,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BARING PLT": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 12,
+            "dunlap": 7,
+            "wood": 6,
+            "loud": 2
+          },
+          "leader": "baldacci",
+          "continuing": 27,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BEALS": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 19,
+            "dunlap": 8,
+            "wood": 6,
+            "loud": 2
+          },
+          "leader": "baldacci",
+          "continuing": 35,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BEAVER COVE": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 9,
+            "dunlap": 7,
+            "wood": 10,
+            "loud": 3
+          },
+          "leader": "wood",
+          "continuing": 29,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BEDDINGTON": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 1,
+            "dunlap": 3,
+            "wood": 0,
+            "loud": 1
+          },
+          "leader": "dunlap",
+          "continuing": 5,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BELFAST": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 513,
+            "dunlap": 531,
+            "wood": 585,
+            "loud": 189
+          },
+          "leader": "wood",
+          "continuing": 1818,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BELGRADE": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 187,
+            "dunlap": 130,
+            "wood": 142,
+            "loud": 39
+          },
+          "leader": "baldacci",
+          "continuing": 498,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BELMONT": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 37,
+            "dunlap": 20,
+            "wood": 34,
+            "loud": 11
+          },
+          "leader": "baldacci",
+          "continuing": 102,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BETHEL": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 174,
+            "dunlap": 84,
+            "wood": 171,
+            "loud": 46
+          },
+          "leader": "baldacci",
+          "continuing": 475,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BINGHAM": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 27,
+            "dunlap": 19,
+            "wood": 18,
+            "loud": 4
+          },
+          "leader": "baldacci",
+          "continuing": 68,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BLAINE": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 14,
+            "dunlap": 5,
+            "wood": 6,
+            "loud": 7
+          },
+          "leader": "baldacci",
+          "continuing": 32,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BLUE HILL": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 267,
+            "dunlap": 284,
+            "wood": 226,
+            "loud": 126
+          },
+          "leader": "dunlap",
+          "continuing": 903,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BOWERBANK": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 8,
+            "dunlap": 5,
+            "wood": 4,
+            "loud": 4
+          },
+          "leader": "baldacci",
+          "continuing": 21,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BRADFORD": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 24,
+            "dunlap": 27,
+            "wood": 9,
+            "loud": 6
+          },
+          "leader": "dunlap",
+          "continuing": 66,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BRADLEY": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 50,
+            "dunlap": 84,
+            "wood": 25,
+            "loud": 18
+          },
+          "leader": "dunlap",
+          "continuing": 177,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BREWER": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 428,
+            "dunlap": 304,
+            "wood": 181,
+            "loud": 118
+          },
+          "leader": "baldacci",
+          "continuing": 1031,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BROOKLIN": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 86,
+            "dunlap": 92,
+            "wood": 82,
+            "loud": 24
+          },
+          "leader": "dunlap",
+          "continuing": 284,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BROOKS": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 18,
+            "dunlap": 27,
+            "wood": 20,
+            "loud": 22
+          },
+          "leader": "dunlap",
+          "continuing": 87,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BROOKSVILLE": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 80,
+            "dunlap": 108,
+            "wood": 64,
+            "loud": 27
+          },
+          "leader": "dunlap",
+          "continuing": 279,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BROWNFIELD": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 86,
+            "dunlap": 56,
+            "wood": 67,
+            "loud": 21
+          },
+          "leader": "baldacci",
+          "continuing": 230,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BROWNVILLE": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 25,
+            "dunlap": 27,
+            "wood": 40,
+            "loud": 9
+          },
+          "leader": "wood",
+          "continuing": 101,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BUCKFIELD": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 44,
+            "dunlap": 45,
+            "wood": 75,
+            "loud": 21
+          },
+          "leader": "wood",
+          "continuing": 185,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BUCKSPORT": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 173,
+            "dunlap": 184,
+            "wood": 154,
+            "loud": 73
+          },
+          "leader": "dunlap",
+          "continuing": 584,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BURLINGTON": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 9,
+            "dunlap": 6,
+            "wood": 5,
+            "loud": 3
+          },
+          "leader": "baldacci",
+          "continuing": 23,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BURNHAM": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 18,
+            "dunlap": 18,
+            "wood": 21,
+            "loud": 15
+          },
+          "leader": "wood",
+          "continuing": 72,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "BYRON": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 11,
+            "dunlap": 2,
+            "wood": 2,
+            "loud": 3
+          },
+          "leader": "baldacci",
+          "continuing": 18,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CALAIS": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 73,
+            "dunlap": 68,
+            "wood": 58,
+            "loud": 16
+          },
+          "leader": "baldacci",
+          "continuing": 215,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CAMBRIDGE": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 5,
+            "dunlap": 5,
+            "wood": 5,
+            "loud": 1
+          },
+          "leader": "baldacci",
+          "continuing": 16,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CANAAN": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 62,
+            "dunlap": 38,
+            "wood": 47,
+            "loud": 14
+          },
+          "leader": "baldacci",
+          "continuing": 161,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CANTON": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 17,
+            "dunlap": 15,
+            "wood": 25,
+            "loud": 8
+          },
+          "leader": "wood",
+          "continuing": 65,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CARATUNK": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 3,
+            "dunlap": 1,
+            "wood": 6,
+            "loud": 5
+          },
+          "leader": "wood",
+          "continuing": 15,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CARIBOU": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 173,
+            "dunlap": 157,
+            "wood": 149,
+            "loud": 38
+          },
+          "leader": "baldacci",
+          "continuing": 517,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CARMEL": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 82,
+            "dunlap": 76,
+            "wood": 34,
+            "loud": 20
+          },
+          "leader": "baldacci",
+          "continuing": 212,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CARRABASSETT VALLEY": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 57,
+            "dunlap": 47,
+            "wood": 52,
+            "loud": 12
+          },
+          "leader": "baldacci",
+          "continuing": 168,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CARTHAGE": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 9,
+            "dunlap": 7,
+            "wood": 7,
+            "loud": 6
+          },
+          "leader": "baldacci",
+          "continuing": 29,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CASTINE": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 74,
+            "dunlap": 61,
+            "wood": 58,
+            "loud": 22
+          },
+          "leader": "baldacci",
+          "continuing": 215,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CASTLE HILL": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 10,
+            "dunlap": 8,
+            "wood": 9,
+            "loud": 4
+          },
+          "leader": "baldacci",
+          "continuing": 31,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CASWELL": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 6,
+            "dunlap": 8,
+            "wood": 6,
+            "loud": 1
+          },
+          "leader": "dunlap",
+          "continuing": 21,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CHAPMAN": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 20,
+            "dunlap": 11,
+            "wood": 4,
+            "loud": 1
+          },
+          "leader": "baldacci",
+          "continuing": 36,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CHARLESTON": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 21,
+            "dunlap": 13,
+            "wood": 11,
+            "loud": 7
+          },
+          "leader": "baldacci",
+          "continuing": 52,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CHELSEA": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 16,
+            "dunlap": 18,
+            "wood": 17,
+            "loud": 16
+          },
+          "leader": "dunlap",
+          "continuing": 67,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CHERRYFIELD": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 24,
+            "dunlap": 42,
+            "wood": 41,
+            "loud": 9
+          },
+          "leader": "dunlap",
+          "continuing": 116,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CHESTER": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 8,
+            "dunlap": 6,
+            "wood": 2,
+            "loud": 0
+          },
+          "leader": "baldacci",
+          "continuing": 16,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CHESTERVILLE": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 40,
+            "dunlap": 44,
+            "wood": 35,
+            "loud": 8
+          },
+          "leader": "dunlap",
+          "continuing": 127,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CLIFTON": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 30,
+            "dunlap": 31,
+            "wood": 16,
+            "loud": 10
+          },
+          "leader": "dunlap",
+          "continuing": 87,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "COLUMBIA": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 6,
+            "dunlap": 9,
+            "wood": 6,
+            "loud": 1
+          },
+          "leader": "dunlap",
+          "continuing": 22,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "COLUMBIA FALLS": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 21,
+            "dunlap": 13,
+            "wood": 13,
+            "loud": 5
+          },
+          "leader": "baldacci",
+          "continuing": 52,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "COOPER": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 5,
+            "dunlap": 6,
+            "wood": 5,
+            "loud": 1
+          },
+          "leader": "dunlap",
+          "continuing": 17,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "COPLIN PLT": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 8,
+            "dunlap": 9,
+            "wood": 4,
+            "loud": 5
+          },
+          "leader": "dunlap",
+          "continuing": 26,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CORINNA": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 71,
+            "dunlap": 33,
+            "wood": 32,
+            "loud": 15
+          },
+          "leader": "baldacci",
+          "continuing": 151,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CORINTH": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 61,
+            "dunlap": 34,
+            "wood": 21,
+            "loud": 13
+          },
+          "leader": "baldacci",
+          "continuing": 129,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CORNVILLE": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 32,
+            "dunlap": 46,
+            "wood": 36,
+            "loud": 10
+          },
+          "leader": "dunlap",
+          "continuing": 124,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CRANBERRY ISLES": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 8,
+            "dunlap": 21,
+            "wood": 21,
+            "loud": 7
+          },
+          "leader": "dunlap",
+          "continuing": 57,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CRYSTAL": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 5,
+            "dunlap": 7,
+            "wood": 1,
+            "loud": 0
+          },
+          "leader": "dunlap",
+          "continuing": 13,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "CUTLER": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 13,
+            "dunlap": 14,
+            "wood": 22,
+            "loud": 2
+          },
+          "leader": "wood",
+          "continuing": 51,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "DALLAS PLT": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 20,
+            "dunlap": 8,
+            "wood": 24,
+            "loud": 5
+          },
+          "leader": "wood",
+          "continuing": 57,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "DANFORTH": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 6,
+            "dunlap": 11,
+            "wood": 11,
+            "loud": 3
+          },
+          "leader": "dunlap",
+          "continuing": 31,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "DEDHAM": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 132,
+            "dunlap": 56,
+            "wood": 71,
+            "loud": 26
+          },
+          "leader": "baldacci",
+          "continuing": 285,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "DEER ISLE": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 127,
+            "dunlap": 160,
+            "wood": 140,
+            "loud": 42
+          },
+          "leader": "dunlap",
+          "continuing": 469,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "DENMARK": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 72,
+            "dunlap": 50,
+            "wood": 68,
+            "loud": 23
+          },
+          "leader": "baldacci",
+          "continuing": 213,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "DENNISTOWN PLT": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 0,
+            "dunlap": 0,
+            "wood": 2,
+            "loud": 1
+          },
+          "leader": "wood",
+          "continuing": 3,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "DENNYSVILLE": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 21,
+            "dunlap": 14,
+            "wood": 14,
+            "loud": 3
+          },
+          "leader": "baldacci",
+          "continuing": 52,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "DETROIT": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 15,
+            "dunlap": 16,
+            "wood": 19,
+            "loud": 5
+          },
+          "leader": "wood",
+          "continuing": 55,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "DEXTER": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 98,
+            "dunlap": 71,
+            "wood": 77,
+            "loud": 27
+          },
+          "leader": "baldacci",
+          "continuing": 273,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "DIXFIELD": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 50,
+            "dunlap": 34,
+            "wood": 64,
+            "loud": 14
+          },
+          "leader": "wood",
+          "continuing": 162,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "DIXMONT": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 48,
+            "dunlap": 44,
+            "wood": 28,
+            "loud": 13
+          },
+          "leader": "baldacci",
+          "continuing": 133,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "DOVER-FOXCROFT": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 166,
+            "dunlap": 110,
+            "wood": 105,
+            "loud": 41
+          },
+          "leader": "baldacci",
+          "continuing": 422,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "DURHAM": {
+      "county": "Androscoggin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 199,
+            "dunlap": 142,
+            "wood": 256,
+            "loud": 106
+          },
+          "leader": "wood",
+          "continuing": 703,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "DYER BROOK": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 5,
+            "dunlap": 2,
+            "wood": 6,
+            "loud": 1
+          },
+          "leader": "wood",
+          "continuing": 14,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "EAGLE LAKE": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 58,
+            "dunlap": 35,
+            "wood": 27,
+            "loud": 9
+          },
+          "leader": "baldacci",
+          "continuing": 129,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "EAST MACHIAS": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 29,
+            "dunlap": 48,
+            "wood": 31,
+            "loud": 24
+          },
+          "leader": "dunlap",
+          "continuing": 132,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "EAST MILLINOCKET": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 47,
+            "dunlap": 61,
+            "wood": 40,
+            "loud": 6
+          },
+          "leader": "dunlap",
+          "continuing": 154,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "EASTBROOK": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 11,
+            "dunlap": 12,
+            "wood": 11,
+            "loud": 3
+          },
+          "leader": "dunlap",
+          "continuing": 37,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "EASTON": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 19,
+            "dunlap": 29,
+            "wood": 17,
+            "loud": 3
+          },
+          "leader": "dunlap",
+          "continuing": 68,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "EASTPORT": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 91,
+            "dunlap": 88,
+            "wood": 79,
+            "loud": 27
+          },
+          "leader": "baldacci",
+          "continuing": 285,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "EDDINGTON": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 82,
+            "dunlap": 57,
+            "wood": 40,
+            "loud": 20
+          },
+          "leader": "baldacci",
+          "continuing": 199,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "EDINBURG": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 5,
+            "dunlap": 5,
+            "wood": 0,
+            "loud": 3
+          },
+          "leader": "baldacci",
+          "continuing": 13,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ELLSWORTH": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 333,
+            "dunlap": 404,
+            "wood": 270,
+            "loud": 141
+          },
+          "leader": "dunlap",
+          "continuing": 1148,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "EMBDEN": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 15,
+            "dunlap": 29,
+            "wood": 18,
+            "loud": 4
+          },
+          "leader": "dunlap",
+          "continuing": 66,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ENFIELD": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 51,
+            "dunlap": 41,
+            "wood": 21,
+            "loud": 6
+          },
+          "leader": "baldacci",
+          "continuing": 119,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ETNA": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 23,
+            "dunlap": 39,
+            "wood": 20,
+            "loud": 7
+          },
+          "leader": "dunlap",
+          "continuing": 89,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "EUSTIS": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 21,
+            "dunlap": 18,
+            "wood": 25,
+            "loud": 9
+          },
+          "leader": "wood",
+          "continuing": 73,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "EXETER": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 22,
+            "dunlap": 25,
+            "wood": 14,
+            "loud": 4
+          },
+          "leader": "dunlap",
+          "continuing": 65,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "FAIRFIELD": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 169,
+            "dunlap": 169,
+            "wood": 166,
+            "loud": 72
+          },
+          "leader": "baldacci",
+          "continuing": 576,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "FARMINGDALE": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 128,
+            "dunlap": 142,
+            "wood": 167,
+            "loud": 38
+          },
+          "leader": "wood",
+          "continuing": 475,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "FARMINGTON": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 205,
+            "dunlap": 221,
+            "wood": 257,
+            "loud": 126
+          },
+          "leader": "wood",
+          "continuing": 809,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "FAYETTE": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 90,
+            "dunlap": 52,
+            "wood": 64,
+            "loud": 16
+          },
+          "leader": "baldacci",
+          "continuing": 222,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "FORT FAIRFIELD": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 82,
+            "dunlap": 71,
+            "wood": 60,
+            "loud": 25
+          },
+          "leader": "baldacci",
+          "continuing": 238,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "FORT KENT": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 215,
+            "dunlap": 112,
+            "wood": 89,
+            "loud": 35
+          },
+          "leader": "baldacci",
+          "continuing": 451,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "FRANKFORT": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 38,
+            "dunlap": 31,
+            "wood": 22,
+            "loud": 12
+          },
+          "leader": "baldacci",
+          "continuing": 103,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "FRANKLIN": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 54,
+            "dunlap": 85,
+            "wood": 49,
+            "loud": 32
+          },
+          "leader": "dunlap",
+          "continuing": 220,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "FREEDOM": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 26,
+            "dunlap": 43,
+            "wood": 31,
+            "loud": 43
+          },
+          "leader": "dunlap",
+          "continuing": 143,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "FRENCHBORO": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 0,
+            "dunlap": 5,
+            "wood": 0,
+            "loud": 0
+          },
+          "leader": "dunlap",
+          "continuing": 5,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "FRENCHVILLE": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 46,
+            "dunlap": 27,
+            "wood": 18,
+            "loud": 6
+          },
+          "leader": "baldacci",
+          "continuing": 97,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "FRYEBURG": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 188,
+            "dunlap": 97,
+            "wood": 186,
+            "loud": 81
+          },
+          "leader": "baldacci",
+          "continuing": 552,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "GARDINER": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 222,
+            "dunlap": 280,
+            "wood": 252,
+            "loud": 113
+          },
+          "leader": "dunlap",
+          "continuing": 867,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "GARFIELD PLT": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 2,
+            "dunlap": 0,
+            "wood": 0,
+            "loud": 0
+          },
+          "leader": "baldacci",
+          "continuing": 2,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "GARLAND": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 27,
+            "dunlap": 33,
+            "wood": 24,
+            "loud": 4
+          },
+          "leader": "dunlap",
+          "continuing": 88,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "GILEAD": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 12,
+            "dunlap": 1,
+            "wood": 11,
+            "loud": 1
+          },
+          "leader": "baldacci",
+          "continuing": 25,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "GLENBURN": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 143,
+            "dunlap": 141,
+            "wood": 66,
+            "loud": 33
+          },
+          "leader": "baldacci",
+          "continuing": 383,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "GOULDSBORO": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 109,
+            "dunlap": 99,
+            "wood": 92,
+            "loud": 25
+          },
+          "leader": "baldacci",
+          "continuing": 325,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "GRAND ISLE": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 16,
+            "dunlap": 10,
+            "wood": 20,
+            "loud": 1
+          },
+          "leader": "wood",
+          "continuing": 47,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "GRAND LAKE STREAM PLT": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 6,
+            "dunlap": 6,
+            "wood": 2,
+            "loud": 1
+          },
+          "leader": "baldacci",
+          "continuing": 15,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "GREAT POND": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 2,
+            "dunlap": 5,
+            "wood": 2,
+            "loud": 1
+          },
+          "leader": "dunlap",
+          "continuing": 10,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "GREENBUSH": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 17,
+            "dunlap": 29,
+            "wood": 8,
+            "loud": 12
+          },
+          "leader": "dunlap",
+          "continuing": 66,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "GREENE": {
+      "county": "Androscoggin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 110,
+            "dunlap": 66,
+            "wood": 164,
+            "loud": 31
+          },
+          "leader": "wood",
+          "continuing": 371,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "GREENVILLE": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 77,
+            "dunlap": 69,
+            "wood": 49,
+            "loud": 13
+          },
+          "leader": "baldacci",
+          "continuing": 208,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "GREENWOOD": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 42,
+            "dunlap": 25,
+            "wood": 59,
+            "loud": 12
+          },
+          "leader": "wood",
+          "continuing": 138,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "GUILFORD": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 40,
+            "dunlap": 29,
+            "wood": 23,
+            "loud": 12
+          },
+          "leader": "baldacci",
+          "continuing": 104,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HALLOWELL": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 184,
+            "dunlap": 380,
+            "wood": 286,
+            "loud": 48
+          },
+          "leader": "dunlap",
+          "continuing": 898,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HAMMOND": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 2,
+            "dunlap": 3,
+            "wood": 3,
+            "loud": 0
+          },
+          "leader": "dunlap",
+          "continuing": 8,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HAMPDEN": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 399,
+            "dunlap": 345,
+            "wood": 235,
+            "loud": 129
+          },
+          "leader": "baldacci",
+          "continuing": 1108,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HANCOCK": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 96,
+            "dunlap": 138,
+            "wood": 89,
+            "loud": 33
+          },
+          "leader": "dunlap",
+          "continuing": 356,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HANOVER": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 24,
+            "dunlap": 10,
+            "wood": 17,
+            "loud": 1
+          },
+          "leader": "baldacci",
+          "continuing": 52,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HARMONY": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 14,
+            "dunlap": 15,
+            "wood": 15,
+            "loud": 2
+          },
+          "leader": "dunlap",
+          "continuing": 46,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HARRINGTON": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 21,
+            "dunlap": 20,
+            "wood": 30,
+            "loud": 6
+          },
+          "leader": "wood",
+          "continuing": 77,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HARTFORD": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 39,
+            "dunlap": 33,
+            "wood": 36,
+            "loud": 7
+          },
+          "leader": "baldacci",
+          "continuing": 115,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HARTLAND": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 31,
+            "dunlap": 27,
+            "wood": 37,
+            "loud": 13
+          },
+          "leader": "wood",
+          "continuing": 108,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HAYNESVILLE": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 2,
+            "dunlap": 2,
+            "wood": 5,
+            "loud": 1
+          },
+          "leader": "wood",
+          "continuing": 10,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HEBRON": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 30,
+            "dunlap": 25,
+            "wood": 49,
+            "loud": 6
+          },
+          "leader": "wood",
+          "continuing": 110,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HERMON": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 307,
+            "dunlap": 124,
+            "wood": 86,
+            "loud": 49
+          },
+          "leader": "baldacci",
+          "continuing": 566,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HERSEY": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 1,
+            "dunlap": 0,
+            "wood": 0,
+            "loud": 0
+          },
+          "leader": "baldacci",
+          "continuing": 1,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HIRAM": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 73,
+            "dunlap": 34,
+            "wood": 61,
+            "loud": 15
+          },
+          "leader": "baldacci",
+          "continuing": 183,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HODGDON": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 20,
+            "dunlap": 15,
+            "wood": 12,
+            "loud": 8
+          },
+          "leader": "baldacci",
+          "continuing": 55,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HOLDEN": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 158,
+            "dunlap": 112,
+            "wood": 59,
+            "loud": 280
+          },
+          "leader": "loud",
+          "continuing": 609,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HOULTON": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 114,
+            "dunlap": 104,
+            "wood": 70,
+            "loud": 32
+          },
+          "leader": "baldacci",
+          "continuing": 320,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HOWLAND": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 37,
+            "dunlap": 29,
+            "wood": 21,
+            "loud": 6
+          },
+          "leader": "baldacci",
+          "continuing": 93,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "HUDSON": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 31,
+            "dunlap": 40,
+            "wood": 18,
+            "loud": 10
+          },
+          "leader": "dunlap",
+          "continuing": 99,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "INDUSTRY": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 32,
+            "dunlap": 23,
+            "wood": 35,
+            "loud": 12
+          },
+          "leader": "wood",
+          "continuing": 102,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ISLAND FALLS": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 16,
+            "dunlap": 16,
+            "wood": 17,
+            "loud": 2
+          },
+          "leader": "wood",
+          "continuing": 51,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ISLESBORO": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 68,
+            "dunlap": 57,
+            "wood": 62,
+            "loud": 17
+          },
+          "leader": "baldacci",
+          "continuing": 204,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "JACKMAN": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 17,
+            "dunlap": 14,
+            "wood": 7,
+            "loud": 3
+          },
+          "leader": "baldacci",
+          "continuing": 41,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "JACKSON": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 25,
+            "dunlap": 18,
+            "wood": 17,
+            "loud": 9
+          },
+          "leader": "baldacci",
+          "continuing": 69,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "JAY": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 179,
+            "dunlap": 151,
+            "wood": 146,
+            "loud": 29
+          },
+          "leader": "baldacci",
+          "continuing": 505,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "JONESBORO": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 14,
+            "dunlap": 9,
+            "wood": 16,
+            "loud": 4
+          },
+          "leader": "wood",
+          "continuing": 43,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "JONESPORT": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 37,
+            "dunlap": 25,
+            "wood": 28,
+            "loud": 7
+          },
+          "leader": "baldacci",
+          "continuing": 97,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "KENDUSKEAG": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 37,
+            "dunlap": 24,
+            "wood": 22,
+            "loud": 8
+          },
+          "leader": "baldacci",
+          "continuing": 91,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LAKE VIEW PLT": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 11,
+            "dunlap": 9,
+            "wood": 4,
+            "loud": 2
+          },
+          "leader": "baldacci",
+          "continuing": 26,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LAKEVILLE": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 13,
+            "dunlap": 7,
+            "wood": 5,
+            "loud": 0
+          },
+          "leader": "baldacci",
+          "continuing": 25,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LAMOINE": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 84,
+            "dunlap": 150,
+            "wood": 95,
+            "loud": 57
+          },
+          "leader": "dunlap",
+          "continuing": 386,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LEE": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 21,
+            "dunlap": 18,
+            "wood": 17,
+            "loud": 9
+          },
+          "leader": "baldacci",
+          "continuing": 65,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LEEDS": {
+      "county": "Androscoggin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 75,
+            "dunlap": 50,
+            "wood": 85,
+            "loud": 24
+          },
+          "leader": "wood",
+          "continuing": 234,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LEVANT": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 61,
+            "dunlap": 65,
+            "wood": 25,
+            "loud": 22
+          },
+          "leader": "dunlap",
+          "continuing": 173,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LEWISTON": {
+      "county": "Androscoggin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 1046,
+            "dunlap": 607,
+            "wood": 1671,
+            "loud": 333
+          },
+          "leader": "wood",
+          "continuing": 3657,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LIBERTY": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 58,
+            "dunlap": 51,
+            "wood": 55,
+            "loud": 20
+          },
+          "leader": "baldacci",
+          "continuing": 184,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LIMESTONE": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 49,
+            "dunlap": 30,
+            "wood": 29,
+            "loud": 14
+          },
+          "leader": "baldacci",
+          "continuing": 122,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LINCOLN": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 125,
+            "dunlap": 104,
+            "wood": 74,
+            "loud": 48
+          },
+          "leader": "baldacci",
+          "continuing": 351,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LINCOLN PLT": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 3,
+            "dunlap": 4,
+            "wood": 3,
+            "loud": 1
+          },
+          "leader": "dunlap",
+          "continuing": 11,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LINCOLNVILLE": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 210,
+            "dunlap": 184,
+            "wood": 207,
+            "loud": 96
+          },
+          "leader": "baldacci",
+          "continuing": 697,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LINNEUS": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 12,
+            "dunlap": 12,
+            "wood": 8,
+            "loud": 4
+          },
+          "leader": "baldacci",
+          "continuing": 36,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LISBON": {
+      "county": "Androscoggin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 285,
+            "dunlap": 159,
+            "wood": 427,
+            "loud": 108
+          },
+          "leader": "wood",
+          "continuing": 979,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LIVERMORE": {
+      "county": "Androscoggin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 83,
+            "dunlap": 68,
+            "wood": 76,
+            "loud": 8
+          },
+          "leader": "baldacci",
+          "continuing": 235,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LIVERMORE FALLS": {
+      "county": "Androscoggin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 62,
+            "dunlap": 48,
+            "wood": 80,
+            "loud": 13
+          },
+          "leader": "wood",
+          "continuing": 203,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LOVELL": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 67,
+            "dunlap": 52,
+            "wood": 88,
+            "loud": 27
+          },
+          "leader": "wood",
+          "continuing": 234,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LOWELL": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 67,
+            "dunlap": 52,
+            "wood": 88,
+            "loud": 27
+          },
+          "leader": "wood",
+          "continuing": 234,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "LUBEC": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 69,
+            "dunlap": 81,
+            "wood": 65,
+            "loud": 26
+          },
+          "leader": "dunlap",
+          "continuing": 241,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MACHIAS": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 48,
+            "dunlap": 45,
+            "wood": 41,
+            "loud": 26
+          },
+          "leader": "baldacci",
+          "continuing": 160,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MACHIASPORT": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 37,
+            "dunlap": 25,
+            "wood": 33,
+            "loud": 11
+          },
+          "leader": "baldacci",
+          "continuing": 106,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MACWAHOC PLT": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 3,
+            "dunlap": 2,
+            "wood": 2,
+            "loud": 0
+          },
+          "leader": "baldacci",
+          "continuing": 7,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MADAWASKA": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 208,
+            "dunlap": 134,
+            "wood": 115,
+            "loud": 27
+          },
+          "leader": "baldacci",
+          "continuing": 484,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MADISON": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 124,
+            "dunlap": 97,
+            "wood": 129,
+            "loud": 33
+          },
+          "leader": "wood",
+          "continuing": 383,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MANCHESTER": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 112,
+            "dunlap": 149,
+            "wood": 90,
+            "loud": 35
+          },
+          "leader": "dunlap",
+          "continuing": 386,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MAPLETON": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 20,
+            "dunlap": 11,
+            "wood": 4,
+            "loud": 1
+          },
+          "leader": "baldacci",
+          "continuing": 36,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MARIAVILLE": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 16,
+            "dunlap": 18,
+            "wood": 17,
+            "loud": 16
+          },
+          "leader": "dunlap",
+          "continuing": 67,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MARS HILL": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 18,
+            "dunlap": 28,
+            "wood": 10,
+            "loud": 5
+          },
+          "leader": "dunlap",
+          "continuing": 61,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MARSHFIELD": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 23,
+            "dunlap": 17,
+            "wood": 15,
+            "loud": 3
+          },
+          "leader": "baldacci",
+          "continuing": 58,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MASARDIS": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 9,
+            "dunlap": 8,
+            "wood": 0,
+            "loud": 0
+          },
+          "leader": "baldacci",
+          "continuing": 17,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MATTAWAMKEAG": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 18,
+            "dunlap": 12,
+            "wood": 13,
+            "loud": 2
+          },
+          "leader": "baldacci",
+          "continuing": 45,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MAXFIELD": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 2,
+            "dunlap": 4,
+            "wood": 5,
+            "loud": 0
+          },
+          "leader": "wood",
+          "continuing": 11,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MECHANIC FALLS": {
+      "county": "Androscoggin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 86,
+            "dunlap": 53,
+            "wood": 121,
+            "loud": 19
+          },
+          "leader": "wood",
+          "continuing": 279,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MEDDYBEMPS": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 10,
+            "dunlap": 1,
+            "wood": 2,
+            "loud": 2
+          },
+          "leader": "baldacci",
+          "continuing": 15,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MEDFORD": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 9,
+            "dunlap": 7,
+            "wood": 6,
+            "loud": 0
+          },
+          "leader": "baldacci",
+          "continuing": 22,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MERCER": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 23,
+            "dunlap": 35,
+            "wood": 23,
+            "loud": 9
+          },
+          "leader": "dunlap",
+          "continuing": 90,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MERRILL": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 2,
+            "dunlap": 4,
+            "wood": 2,
+            "loud": 0
+          },
+          "leader": "dunlap",
+          "continuing": 8,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MEXICO": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 54,
+            "dunlap": 55,
+            "wood": 44,
+            "loud": 31
+          },
+          "leader": "dunlap",
+          "continuing": 184,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MILFORD": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 90,
+            "dunlap": 163,
+            "wood": 43,
+            "loud": 37
+          },
+          "leader": "dunlap",
+          "continuing": 333,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MILLINOCKET": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 171,
+            "dunlap": 161,
+            "wood": 110,
+            "loud": 33
+          },
+          "leader": "baldacci",
+          "continuing": 475,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MILO": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 65,
+            "dunlap": 35,
+            "wood": 51,
+            "loud": 25
+          },
+          "leader": "baldacci",
+          "continuing": 176,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MINOT": {
+      "county": "Androscoggin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 99,
+            "dunlap": 49,
+            "wood": 145,
+            "loud": 23
+          },
+          "leader": "wood",
+          "continuing": 316,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MONMOUTH": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 136,
+            "dunlap": 117,
+            "wood": 179,
+            "loud": 39
+          },
+          "leader": "wood",
+          "continuing": 471,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MONROE": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 32,
+            "dunlap": 56,
+            "wood": 45,
+            "loud": 27
+          },
+          "leader": "dunlap",
+          "continuing": 160,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MONSON": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 35,
+            "dunlap": 21,
+            "wood": 25,
+            "loud": 9
+          },
+          "leader": "baldacci",
+          "continuing": 90,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MONTICELLO": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 9,
+            "dunlap": 9,
+            "wood": 6,
+            "loud": 4
+          },
+          "leader": "baldacci",
+          "continuing": 28,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MONTVILLE": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 63,
+            "dunlap": 52,
+            "wood": 61,
+            "loud": 33
+          },
+          "leader": "baldacci",
+          "continuing": 209,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MOOSE RIVER": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 0,
+            "dunlap": 2,
+            "wood": 0,
+            "loud": 0
+          },
+          "leader": "dunlap",
+          "continuing": 2,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MORO PLT": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 1,
+            "dunlap": 0,
+            "wood": 0,
+            "loud": 1
+          },
+          "leader": "baldacci",
+          "continuing": 2,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MORRILL": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 32,
+            "dunlap": 44,
+            "wood": 32,
+            "loud": 21
+          },
+          "leader": "dunlap",
+          "continuing": 129,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MOSCOW": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 3,
+            "dunlap": 5,
+            "wood": 16,
+            "loud": 7
+          },
+          "leader": "wood",
+          "continuing": 31,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MOUNT CHASE": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 8,
+            "dunlap": 4,
+            "wood": 8,
+            "loud": 2
+          },
+          "leader": "baldacci",
+          "continuing": 22,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "MOUNT DESERT": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 132,
+            "dunlap": 262,
+            "wood": 125,
+            "loud": 47
+          },
+          "leader": "dunlap",
+          "continuing": 566,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "NASHVILLE PLT": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 1,
+            "dunlap": 3,
+            "wood": 0,
+            "loud": 0
+          },
+          "leader": "dunlap",
+          "continuing": 4,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "NEW CANADA": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 22,
+            "dunlap": 18,
+            "wood": 4,
+            "loud": 6
+          },
+          "leader": "baldacci",
+          "continuing": 50,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "NEW LIMERICK": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 7,
+            "dunlap": 4,
+            "wood": 7,
+            "loud": 2
+          },
+          "leader": "baldacci",
+          "continuing": 20,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "NEW SHARON": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 43,
+            "dunlap": 65,
+            "wood": 64,
+            "loud": 22
+          },
+          "leader": "dunlap",
+          "continuing": 194,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "NEW SWEDEN": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 30,
+            "dunlap": 17,
+            "wood": 13,
+            "loud": 0
+          },
+          "leader": "baldacci",
+          "continuing": 60,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "NEWBURGH": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 55,
+            "dunlap": 63,
+            "wood": 26,
+            "loud": 16
+          },
+          "leader": "dunlap",
+          "continuing": 160,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "NEWPORT": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 84,
+            "dunlap": 73,
+            "wood": 61,
+            "loud": 30
+          },
+          "leader": "baldacci",
+          "continuing": 248,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "NEWRY": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 18,
+            "dunlap": 20,
+            "wood": 28,
+            "loud": 5
+          },
+          "leader": "wood",
+          "continuing": 71,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "NORRIDGEWOCK": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 72,
+            "dunlap": 101,
+            "wood": 76,
+            "loud": 14
+          },
+          "leader": "dunlap",
+          "continuing": 263,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "NORTHFIELD": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 9,
+            "dunlap": 3,
+            "wood": 5,
+            "loud": 1
+          },
+          "leader": "baldacci",
+          "continuing": 18,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "NORTHPORT": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 121,
+            "dunlap": 90,
+            "wood": 131,
+            "loud": 37
+          },
+          "leader": "wood",
+          "continuing": 379,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "NORWAY": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 210,
+            "dunlap": 147,
+            "wood": 253,
+            "loud": 73
+          },
+          "leader": "wood",
+          "continuing": 683,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "OAKLAND": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 259,
+            "dunlap": 182,
+            "wood": 171,
+            "loud": 48
+          },
+          "leader": "baldacci",
+          "continuing": 660,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "OLD TOWN": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 171,
+            "dunlap": 545,
+            "wood": 121,
+            "loud": 179
+          },
+          "leader": "dunlap",
+          "continuing": 1016,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ORIENT": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 4,
+            "dunlap": 7,
+            "wood": 1,
+            "loud": 0
+          },
+          "leader": "dunlap",
+          "continuing": 12,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ORLAND": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 125,
+            "dunlap": 113,
+            "wood": 89,
+            "loud": 29
+          },
+          "leader": "baldacci",
+          "continuing": 356,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ORONO": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 323,
+            "dunlap": 644,
+            "wood": 194,
+            "loud": 215
+          },
+          "leader": "dunlap",
+          "continuing": 1376,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ORRINGTON": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 185,
+            "dunlap": 137,
+            "wood": 92,
+            "loud": 47
+          },
+          "leader": "baldacci",
+          "continuing": 461,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "OSBORN": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 2,
+            "dunlap": 0,
+            "wood": 1,
+            "loud": 0
+          },
+          "leader": "baldacci",
+          "continuing": 3,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "OTISFIELD": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 72,
+            "dunlap": 53,
+            "wood": 115,
+            "loud": 15
+          },
+          "leader": "wood",
+          "continuing": 255,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "OXFORD": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 91,
+            "dunlap": 60,
+            "wood": 122,
+            "loud": 26
+          },
+          "leader": "wood",
+          "continuing": 299,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PALERMO": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 0,
+            "dunlap": 56,
+            "wood": 46,
+            "loud": 21
+          },
+          "leader": "dunlap",
+          "continuing": 123,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PALMYRA": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 42,
+            "dunlap": 26,
+            "wood": 29,
+            "loud": 12
+          },
+          "leader": "baldacci",
+          "continuing": 109,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PARIS": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 172,
+            "dunlap": 104,
+            "wood": 176,
+            "loud": 58
+          },
+          "leader": "wood",
+          "continuing": 510,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PARKMAN": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 32,
+            "dunlap": 14,
+            "wood": 15,
+            "loud": 2
+          },
+          "leader": "baldacci",
+          "continuing": 63,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PASSADUMKEAG": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 8,
+            "dunlap": 9,
+            "wood": 4,
+            "loud": 1
+          },
+          "leader": "dunlap",
+          "continuing": 22,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PATTEN": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 21,
+            "dunlap": 12,
+            "wood": 20,
+            "loud": 5
+          },
+          "leader": "baldacci",
+          "continuing": 58,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PENOBSCOT": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 56,
+            "dunlap": 93,
+            "wood": 90,
+            "loud": 27
+          },
+          "leader": "dunlap",
+          "continuing": 266,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PERU": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 72,
+            "dunlap": 25,
+            "wood": 40,
+            "loud": 13
+          },
+          "leader": "baldacci",
+          "continuing": 150,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PHILLIPS": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 46,
+            "dunlap": 28,
+            "wood": 44,
+            "loud": 12
+          },
+          "leader": "baldacci",
+          "continuing": 130,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PLEASANT RIDGE PLT": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 3,
+            "dunlap": 5,
+            "wood": 0,
+            "loud": 0
+          },
+          "leader": "dunlap",
+          "continuing": 8,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PLYMOUTH": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 23,
+            "dunlap": 24,
+            "wood": 23,
+            "loud": 7
+          },
+          "leader": "dunlap",
+          "continuing": 77,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "POLAND": {
+      "county": "Androscoggin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 216,
+            "dunlap": 128,
+            "wood": 253,
+            "loud": 59
+          },
+          "leader": "wood",
+          "continuing": 656,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PORTAGE LAKE": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 12,
+            "dunlap": 15,
+            "wood": 10,
+            "loud": 2
+          },
+          "leader": "dunlap",
+          "continuing": 39,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PORTER": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 41,
+            "dunlap": 27,
+            "wood": 48,
+            "loud": 22
+          },
+          "leader": "wood",
+          "continuing": 138,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PRESQUE ISLE": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 214,
+            "dunlap": 224,
+            "wood": 128,
+            "loud": 70
+          },
+          "leader": "dunlap",
+          "continuing": 636,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PRINCETON": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 9,
+            "dunlap": 17,
+            "wood": 19,
+            "loud": 6
+          },
+          "leader": "wood",
+          "continuing": 51,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "PROSPECT": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 32,
+            "dunlap": 30,
+            "wood": 15,
+            "loud": 12
+          },
+          "leader": "baldacci",
+          "continuing": 89,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "RANDOLPH": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 66,
+            "dunlap": 53,
+            "wood": 71,
+            "loud": 16
+          },
+          "leader": "wood",
+          "continuing": 206,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "RANGELEY": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 57,
+            "dunlap": 27,
+            "wood": 55,
+            "loud": 24
+          },
+          "leader": "baldacci",
+          "continuing": 163,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "READFIELD": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 142,
+            "dunlap": 149,
+            "wood": 127,
+            "loud": 39
+          },
+          "leader": "dunlap",
+          "continuing": 457,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ROBBINSTON": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 24,
+            "dunlap": 20,
+            "wood": 24,
+            "loud": 8
+          },
+          "leader": "baldacci",
+          "continuing": 76,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ROCKWOOD STRIP TWP": {
+      "county": "Unknown",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 20,
+            "dunlap": 9,
+            "wood": 9,
+            "loud": 1
+          },
+          "leader": "baldacci",
+          "continuing": 39,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ROME": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 52,
+            "dunlap": 61,
+            "wood": 48,
+            "loud": 16
+          },
+          "leader": "dunlap",
+          "continuing": 177,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ROQUE BLUFFS": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 27,
+            "dunlap": 18,
+            "wood": 10,
+            "loud": 4
+          },
+          "leader": "baldacci",
+          "continuing": 59,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ROXBURY": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 19,
+            "dunlap": 9,
+            "wood": 11,
+            "loud": 1
+          },
+          "leader": "baldacci",
+          "continuing": 40,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "RUMFORD": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 184,
+            "dunlap": 87,
+            "wood": 183,
+            "loud": 41
+          },
+          "leader": "baldacci",
+          "continuing": 495,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SABATTUS": {
+      "county": "Androscoggin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 125,
+            "dunlap": 63,
+            "wood": 192,
+            "loud": 37
+          },
+          "leader": "wood",
+          "continuing": 417,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SAINT AGATHA": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 30,
+            "dunlap": 31,
+            "wood": 18,
+            "loud": 3
+          },
+          "leader": "dunlap",
+          "continuing": 82,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SAINT ALBANS": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 46,
+            "dunlap": 31,
+            "wood": 32,
+            "loud": 10
+          },
+          "leader": "baldacci",
+          "continuing": 119,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SAINT JOHN PLT": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 16,
+            "dunlap": 7,
+            "wood": 6,
+            "loud": 2
+          },
+          "leader": "baldacci",
+          "continuing": 31,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SANGERVILLE": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 31,
+            "dunlap": 24,
+            "wood": 18,
+            "loud": 8
+          },
+          "leader": "baldacci",
+          "continuing": 81,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SEARSMONT": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 87,
+            "dunlap": 55,
+            "wood": 70,
+            "loud": 35
+          },
+          "leader": "baldacci",
+          "continuing": 247,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SEARSPORT": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 144,
+            "dunlap": 125,
+            "wood": 136,
+            "loud": 42
+          },
+          "leader": "baldacci",
+          "continuing": 447,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SEBEC": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 10,
+            "dunlap": 21,
+            "wood": 5,
+            "loud": 5
+          },
+          "leader": "dunlap",
+          "continuing": 41,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SEBOEIS PLT": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 4,
+            "dunlap": 1,
+            "wood": 0,
+            "loud": 1
+          },
+          "leader": "baldacci",
+          "continuing": 6,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SEDGWICK": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 92,
+            "dunlap": 104,
+            "wood": 89,
+            "loud": 32
+          },
+          "leader": "dunlap",
+          "continuing": 317,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SHERMAN": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 18,
+            "dunlap": 9,
+            "wood": 11,
+            "loud": 3
+          },
+          "leader": "baldacci",
+          "continuing": 41,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SIDNEY": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 175,
+            "dunlap": 128,
+            "wood": 145,
+            "loud": 45
+          },
+          "leader": "baldacci",
+          "continuing": 493,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SKOWHEGAN": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 226,
+            "dunlap": 240,
+            "wood": 215,
+            "loud": 47
+          },
+          "leader": "dunlap",
+          "continuing": 728,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SMITHFIELD": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 47,
+            "dunlap": 46,
+            "wood": 51,
+            "loud": 17
+          },
+          "leader": "wood",
+          "continuing": 161,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SOLON": {
+      "county": "Somerset",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 29,
+            "dunlap": 28,
+            "wood": 21,
+            "loud": 3
+          },
+          "leader": "baldacci",
+          "continuing": 81,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SORRENTO": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 21,
+            "dunlap": 20,
+            "wood": 14,
+            "loud": 12
+          },
+          "leader": "baldacci",
+          "continuing": 67,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SOUTHWEST HARBOR": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 86,
+            "dunlap": 193,
+            "wood": 105,
+            "loud": 58
+          },
+          "leader": "dunlap",
+          "continuing": 442,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "STACYVILLE": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 3,
+            "dunlap": 5,
+            "wood": 2,
+            "loud": 2
+          },
+          "leader": "dunlap",
+          "continuing": 12,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "STETSON": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 27,
+            "dunlap": 32,
+            "wood": 15,
+            "loud": 10
+          },
+          "leader": "dunlap",
+          "continuing": 84,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "STEUBEN": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 37,
+            "dunlap": 45,
+            "wood": 49,
+            "loud": 15
+          },
+          "leader": "wood",
+          "continuing": 146,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "STOCKHOLM": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 13,
+            "dunlap": 11,
+            "wood": 8,
+            "loud": 6
+          },
+          "leader": "baldacci",
+          "continuing": 38,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "STOCKTON SPRINGS": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 89,
+            "dunlap": 111,
+            "wood": 104,
+            "loud": 27
+          },
+          "leader": "dunlap",
+          "continuing": 331,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "STONEHAM": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 20,
+            "dunlap": 8,
+            "wood": 17,
+            "loud": 9
+          },
+          "leader": "baldacci",
+          "continuing": 54,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "STRONG": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 52,
+            "dunlap": 24,
+            "wood": 42,
+            "loud": 12
+          },
+          "leader": "baldacci",
+          "continuing": 130,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SULLIVAN": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 34,
+            "dunlap": 45,
+            "wood": 40,
+            "loud": 26
+          },
+          "leader": "dunlap",
+          "continuing": 145,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SUMNER": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 28,
+            "dunlap": 31,
+            "wood": 43,
+            "loud": 8
+          },
+          "leader": "wood",
+          "continuing": 110,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SURRY": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 92,
+            "dunlap": 167,
+            "wood": 97,
+            "loud": 26
+          },
+          "leader": "dunlap",
+          "continuing": 382,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SWANS ISLAND": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 23,
+            "dunlap": 16,
+            "wood": 14,
+            "loud": 7
+          },
+          "leader": "baldacci",
+          "continuing": 60,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "SWANVILLE": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 63,
+            "dunlap": 47,
+            "wood": 37,
+            "loud": 33
+          },
+          "leader": "baldacci",
+          "continuing": 180,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "TALMADGE": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 0,
+            "dunlap": 2,
+            "wood": 0,
+            "loud": 1
+          },
+          "leader": "dunlap",
+          "continuing": 3,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "TEMPLE": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 15,
+            "dunlap": 22,
+            "wood": 37,
+            "loud": 11
+          },
+          "leader": "wood",
+          "continuing": 85,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "THORNDIKE": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 27,
+            "dunlap": 32,
+            "wood": 28,
+            "loud": 16
+          },
+          "leader": "dunlap",
+          "continuing": 103,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "TOPSFIELD": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 4,
+            "dunlap": 2,
+            "wood": 2,
+            "loud": 0
+          },
+          "leader": "baldacci",
+          "continuing": 8,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "TREMONT": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 81,
+            "dunlap": 92,
+            "wood": 62,
+            "loud": 27
+          },
+          "leader": "dunlap",
+          "continuing": 262,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "TRENTON": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 81,
+            "dunlap": 62,
+            "wood": 92,
+            "loud": 27
+          },
+          "leader": "wood",
+          "continuing": 262,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "TROY": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 27,
+            "dunlap": 22,
+            "wood": 32,
+            "loud": 12
+          },
+          "leader": "wood",
+          "continuing": 93,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "TURNER": {
+      "county": "Androscoggin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 172,
+            "dunlap": 103,
+            "wood": 187,
+            "loud": 40
+          },
+          "leader": "wood",
+          "continuing": 502,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "UNITY": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 64,
+            "dunlap": 61,
+            "wood": 49,
+            "loud": 21
+          },
+          "leader": "baldacci",
+          "continuing": 195,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "VAN BUREN": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 82,
+            "dunlap": 59,
+            "wood": 41,
+            "loud": 9
+          },
+          "leader": "baldacci",
+          "continuing": 191,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "VANCEBORO": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 2,
+            "dunlap": 3,
+            "wood": 8,
+            "loud": 1
+          },
+          "leader": "wood",
+          "continuing": 14,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "VEAZIE": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 126,
+            "dunlap": 91,
+            "wood": 46,
+            "loud": 30
+          },
+          "leader": "baldacci",
+          "continuing": 293,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "VERONA ISLAND": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 26,
+            "dunlap": 20,
+            "wood": 13,
+            "loud": 8
+          },
+          "leader": "baldacci",
+          "continuing": 67,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "VIENNA": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 41,
+            "dunlap": 19,
+            "wood": 33,
+            "loud": 9
+          },
+          "leader": "baldacci",
+          "continuing": 102,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WADE": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 4,
+            "dunlap": 9,
+            "wood": 1,
+            "loud": 3
+          },
+          "leader": "dunlap",
+          "continuing": 17,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WAITE": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 2,
+            "dunlap": 1,
+            "wood": 4,
+            "loud": 0
+          },
+          "leader": "wood",
+          "continuing": 7,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WALDO": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 23,
+            "dunlap": 41,
+            "wood": 23,
+            "loud": 18
+          },
+          "leader": "dunlap",
+          "continuing": 105,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WALES": {
+      "county": "Androscoggin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 32,
+            "dunlap": 30,
+            "wood": 45,
+            "loud": 11
+          },
+          "leader": "wood",
+          "continuing": 118,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WALLAGRASS": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 25,
+            "dunlap": 19,
+            "wood": 7,
+            "loud": 3
+          },
+          "leader": "baldacci",
+          "continuing": 54,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WASHBURN": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 23,
+            "dunlap": 21,
+            "wood": 20,
+            "loud": 8
+          },
+          "leader": "baldacci",
+          "continuing": 72,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WATERFORD": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 47,
+            "dunlap": 57,
+            "wood": 81,
+            "loud": 24
+          },
+          "leader": "wood",
+          "continuing": 209,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WAYNE": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 68,
+            "dunlap": 139,
+            "wood": 60,
+            "loud": 16
+          },
+          "leader": "dunlap",
+          "continuing": 283,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WELD": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 20,
+            "dunlap": 28,
+            "wood": 16,
+            "loud": 2
+          },
+          "leader": "dunlap",
+          "continuing": 66,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WEST PARIS": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 44,
+            "dunlap": 53,
+            "wood": 46,
+            "loud": 11
+          },
+          "leader": "dunlap",
+          "continuing": 154,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WESTFIELD": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 13,
+            "dunlap": 6,
+            "wood": 4,
+            "loud": 2
+          },
+          "leader": "baldacci",
+          "continuing": 25,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WESTMANLAND": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 0,
+            "dunlap": 1,
+            "wood": 1,
+            "loud": 0
+          },
+          "leader": "dunlap",
+          "continuing": 2,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WESTON": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 4,
+            "dunlap": 3,
+            "wood": 12,
+            "loud": 1
+          },
+          "leader": "wood",
+          "continuing": 20,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WILLIMANTIC": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 7,
+            "dunlap": 2,
+            "wood": 0,
+            "loud": 1
+          },
+          "leader": "baldacci",
+          "continuing": 10,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WILTON": {
+      "county": "Franklin",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 156,
+            "dunlap": 95,
+            "wood": 154,
+            "loud": 35
+          },
+          "leader": "baldacci",
+          "continuing": 440,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WINN": {
+      "county": "Penobscot",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 8,
+            "dunlap": 3,
+            "wood": 2,
+            "loud": 1
+          },
+          "leader": "baldacci",
+          "continuing": 14,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WINTER HARBOR": {
+      "county": "Hancock",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 36,
+            "dunlap": 17,
+            "wood": 3,
+            "loud": 4
+          },
+          "leader": "baldacci",
+          "continuing": 60,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WINTERPORT": {
+      "county": "Waldo",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 147,
+            "dunlap": 138,
+            "wood": 96,
+            "loud": 41
+          },
+          "leader": "baldacci",
+          "continuing": 422,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WINTHROP": {
+      "county": "Kennebec",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 280,
+            "dunlap": 285,
+            "wood": 301,
+            "loud": 71
+          },
+          "leader": "wood",
+          "continuing": 937,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WOODLAND": {
+      "county": "Aroostook",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 22,
+            "dunlap": 23,
+            "wood": 15,
+            "loud": 4
+          },
+          "leader": "dunlap",
+          "continuing": 64,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "WOODSTOCK": {
+      "county": "Oxford",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 49,
+            "dunlap": 24,
+            "wood": 55,
+            "loud": 11
+          },
+          "leader": "wood",
+          "continuing": 139,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "ATKINSON TWP": {
+      "county": "Piscataquis",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 6,
+            "dunlap": 5,
+            "wood": 3,
+            "loud": 1
+          },
+          "leader": "baldacci",
+          "continuing": 15,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    },
+    "INDIAN TWP RES": {
+      "county": "Washington",
+      "rounds": {
+        "1": {
+          "votes": {
+            "baldacci": 24,
+            "dunlap": 30,
+            "wood": 16,
+            "loud": 13
+          },
+          "leader": "dunlap",
+          "continuing": 83,
+          "received": null,
+          "exhausted": 0
+        }
+      }
+    }
+  },
+  "story": {
+    "intro": "Unofficial election-night first-choice results. Ranked-choice rounds will be added when the official CVR is released.",
+    "rounds": {
+      "1": "First-choice vote share by town on election night. Baldacci leads the field; no candidate cleared 50%, so the race will go to ranked-choice tabulation."
+    }
+  }
+}
