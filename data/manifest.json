@@ -6,8 +6,18 @@
     "race": "CD2 Democratic Primary",
     "status": "available",
     "dataUrl": "data/rcv_2018_cd2_dem.json",
-    "meta": "4 candidates · 2 rounds · 50,845 ballots",
+    "meta": "4 candidates · 4 rounds · 50,845 ballots",
     "candidates": ["Golden", "St. Clair", "Olson", "Fulford"]
+  },
+  {
+    "id": "2018_gov_dem",
+    "label": "2018 Gubernatorial Dem Primary",
+    "year": 2018,
+    "race": "Gubernatorial Democratic Primary",
+    "status": "available",
+    "dataUrl": "data/rcv_2018_gov_dem.json",
+    "meta": "8 candidates · 4 rounds · 132,250 ballots",
+    "candidates": ["Mills", "Cote", "Sweet", "Eves", "Dion M.", "Russell", "Dion D."]
   },
   {
     "id": "2026_cd2_dem",
