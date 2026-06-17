@@ -6,8 +6,13 @@
     "race": "ME-CD2 Democratic Primary",
     "status": "available",
     "dataUrl": "data/rcv_2018_cd2_dem.json",
-    "meta": "4 candidates · 2 rounds · 50,845 ballots",
-    "candidates": ["Golden", "St. Clair", "Olson", "Fulford"]
+    "meta": "4 candidates \u00b7 2 rounds \u00b7 50,845 ballots",
+    "candidates": [
+      "Golden",
+      "St. Clair",
+      "Olson",
+      "Fulford"
+    ]
   },
   {
     "id": "2018_gov_dem",
@@ -16,17 +21,31 @@
     "race": "ME Democratic Gubernatorial Primary",
     "status": "available",
     "dataUrl": "data/rcv_2018_gov_dem.json",
-    "meta": "8 candidates · 4 rounds · 132,250 ballots",
-    "candidates": ["Mills", "Cote", "Sweet", "Eves", "Dion M.", "Russell", "Dion D."]
+    "meta": "8 candidates \u00b7 4 rounds \u00b7 132,250 ballots",
+    "candidates": [
+      "Mills",
+      "Cote",
+      "Sweet",
+      "Eves",
+      "Dion M.",
+      "Russell",
+      "Dion D."
+    ]
   },
   {
     "id": "2026_cd2_dem",
     "label": "2026 CD2 Dem Primary",
     "year": 2026,
     "race": "CD2 Democratic Primary",
-    "status": "coming_soon",
+    "status": "available",
     "dataUrl": "data/rcv_2026_cd2_dem.json",
-    "meta": "CVR pending post-certification",
-    "candidates": ["Baldacci", "Dunlap", "Loud", "Wood"]
+    "meta": "4 candidates \u00b7 Round 1 (election night) \u00b7 75,720 ballots",
+    "candidates": [
+      "Baldacci",
+      "Dunlap",
+      "Wood",
+      "Loud"
+    ],
+    "featured": true
   }
 ]
