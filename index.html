@@ -855,6 +855,12 @@ const CANDIDATE_COLORS = {
   "Dunlap": "#5BA85A",
   "Loud": "#9B6BB5",
   "Wood": "#E07B39",
+  // 2026 Gov
+  "Shah": "#3B7BC8",
+  "Pingree": "#5BA85A",
+  "Jackson": "#E07B39",
+  "Bellows": "#9B6BB5",
+  "King III": "#C1666B",
   // 2018 Gov
   "Mills": "#2E86AB",
   "Cote": "#E07B39",
@@ -897,6 +903,16 @@ const MANIFEST = [
     dataUrl: "data/rcv_2026_cd2_dem.json",
     meta: "4 candidates · Round 1 (election night) · 75,720 ballots",
     candidates: ["Baldacci", "Dunlap", "Wood", "Loud"]
+  },
+  {
+    id: "2026_gov_dem",
+    label: "2026 Gubernatorial Dem Primary",
+    year: 2026,
+    race: "ME Democratic Gubernatorial Primary",
+    status: "available",
+    dataUrl: "data/rcv_2026_gov_dem.json",
+    meta: "5 candidates · Round 1 (election night) · 214,920 ballots",
+    candidates: ["Shah", "Pingree", "Jackson", "Bellows", "King III"]
   }
 ];
 
@@ -967,6 +983,7 @@ function getFeaturedDesc(e) {
   // Static descriptions keyed by id; fall back to generic
   const descs = {
     "2026_cd2_dem": "Four candidates, election night. Baldacci leads the first-choice count but no one clears 50% — the race heads to a ranked-choice tabulation. Unofficial results by town; full RCV rounds drop when the Cast Vote Record is released.",
+    "2026_gov_dem": "Five candidates, election night. Shah leads the first-choice count but falls well short of a majority, sending Maine's open Democratic primary for governor to a ranked-choice tabulation. Jackson, Pingree, and Bellows cross-endorsed and finished in a tight cluster behind him. Unofficial results by town; full RCV rounds drop when the Cast Vote Record is released.",
     "2018_cd2_dem": "Four candidates, four rounds. Jared Golden defeats Lucas St. Clair after Fulford and Olson are eliminated and their ballots redistribute across Maine's rural second district.",
     "2018_gov_dem": "Eight candidates, four rounds. Janet Mills wins the Democratic gubernatorial primary after Adam Cote, Elizabeth Sweet, Mark Eves, and four minor candidates are eliminated in sequence.",
   };
