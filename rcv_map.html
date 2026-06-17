@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-sankey@0.12.3/dist/d3-sankey.min.js"></script>
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: "Helvetica Neue", Arial, sans-serif; background: #0d0d10; color: #eaeaf2; height: 100vh; overflow: hidden; display: flex; flex-direction: column; }
@@ -63,6 +64,15 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; background: #0d0d10; co
 .cand-delta { font-size: 10px; font-weight: 700; }
 
 #ballot-summary { padding: 12px 16px; border-top: 1px solid #2a2a36; font-size: 11px; color: #8888a4; font-variant-numeric: tabular-nums; }
+/* ── Sidebar view toggle ── */
+#sidebar-view-toggle { display: flex; gap: 4px; padding: 8px 16px; border-top: 1px solid #2a2a36; flex-shrink: 0; }
+.view-tab { flex: 1; padding: 5px 0; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; background: #1e1e26; border: 1px solid #2a2a36; color: #8888a4; cursor: pointer; border-radius: 3px; transition: all 0.2s; }
+.view-tab.active { background: #2a2a36; color: #eaeaf2; border-color: #b8963c; }
+/* ── Sankey panel ── */
+#sankey-panel { display: none; flex: 1; overflow-y: auto; padding: 12px 16px; }
+#sankey-panel.visible { display: block; }
+#sankey-header { font-size: 10px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: #8888a4; margin-bottom: 10px; }
+#sankey-empty { font-size: 12px; color: #8888a4; font-style: italic; text-align: center; margin-top: 24px; }
 .ballot-row { display: flex; justify-content: space-between; margin-bottom: 3px; }
 .ballot-val { color: #eaeaf2; }
 
@@ -473,6 +483,15 @@ body { font-family: "Helvetica Neue", Arial, sans-serif; background: #0d0d10; co
       <div class="ballot-row"><span>Total ballots</span><span class="ballot-val" id="stat-total">—</span></div>
       <div class="ballot-row"><span>Continuing</span><span class="ballot-val" id="stat-continuing">—</span></div>
       <div class="ballot-row"><span>Exhausted this round</span><span class="ballot-val" id="stat-exhausted">—</span></div>
+    </div>
+    <div id="sankey-panel">
+      <div id="sankey-header">Transfer Flow</div>
+      <div id="sankey-svg-wrap"></div>
+      <div id="sankey-empty"></div>
+    </div>
+    <div id="sidebar-view-toggle">
+      <button class="view-tab active" data-view="map">MAP VIEW</button>
+      <button class="view-tab" data-view="transfers">TRANSFERS</button>
     </div>
   </div>
 </div>
@@ -1693,6 +1712,215 @@ document.addEventListener('keydown', () => {
 // TODO: Pop-up notes stub — implement once 2026 CVR narrative facts are ready
 // function showPopupsForRound(round) { /* ... */ }
 // function showPopup(popData) { /* ... */ }
+
+// ═══════════════════════════════════════════════════════════════════
+// SIDEBAR VIEW TOGGLE + SANKEY TRANSFER DIAGRAM
+// ═══════════════════════════════════════════════════════════════════
+
+let sidebarView = 'map';
+
+document.querySelectorAll('.view-tab').forEach(btn => {
+  btn.addEventListener('click', () => {
+    sidebarView = btn.dataset.view;
+    document.querySelectorAll('.view-tab').forEach(b => b.classList.toggle('active', b.dataset.view === sidebarView));
+    const mapEls = ['color-modes', 'standings', 'ballot-summary'];
+    mapEls.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.style.display = sidebarView === 'map' ? '' : 'none';
+    });
+    const panel = document.getElementById('sankey-panel');
+    if (sidebarView === 'transfers') {
+      panel.classList.add('visible');
+      renderSankey(currentRound);
+    } else {
+      panel.classList.remove('visible');
+    }
+  });
+});
+
+function aggregateRoundTransfers(round) {
+  if (!electionData || round < 2) return null;
+  const totals = {};
+  for (const town of Object.values(electionData.towns)) {
+    if (town.mapped === false) continue; // skip UOCAVA
+    const rd = town.rounds?.[String(round)];
+    if (!rd?.received) continue;
+    for (const [candId, votes] of Object.entries(rd.received)) {
+      if (!votes || isNaN(votes)) continue;
+      totals[candId] = (totals[candId] || 0) + votes;
+    }
+    if (rd.exhausted > 0) totals['__exhausted__'] = (totals['__exhausted__'] || 0) + rd.exhausted;
+  }
+  return Object.keys(totals).length ? totals : null;
+}
+
+function getEliminatedForRound(round) {
+  if (!electionData) return [];
+  const meta = electionData.meta.rounds.find(r => r.round === round);
+  if (!meta?.eliminated) return [];
+  return Array.isArray(meta.eliminated) ? meta.eliminated : [meta.eliminated];
+}
+
+function renderSankey(round) {
+  const wrap = document.getElementById('sankey-svg-wrap');
+  const empty = document.getElementById('sankey-empty');
+  wrap.innerHTML = '';
+  empty.textContent = '';
+
+  if (!electionData || round < 2) {
+    empty.textContent = 'Advance to Round 2 to see transfer flows.';
+    return;
+  }
+
+  const elimIds = getEliminatedForRound(round);
+  if (!elimIds.length) {
+    empty.textContent = 'No elimination this round.';
+    return;
+  }
+
+  const transfers = aggregateRoundTransfers(round);
+  if (!transfers) {
+    empty.textContent = 'No transfer data recorded for this round.';
+    return;
+  }
+
+  const totalTransferred = Object.values(transfers).reduce((s, v) => s + v, 0);
+  if (totalTransferred === 0) {
+    empty.textContent = 'No transfers recorded for this round.';
+    return;
+  }
+
+  // Build node/link arrays
+  // Left side: eliminated candidates; Right side: receiving candidates + exhausted
+  const elimCands = elimIds
+    .map(id => electionData.meta.candidates.find(c => c.id === id))
+    .filter(Boolean);
+
+  const receiverEntries = Object.entries(transfers).filter(([id]) => id !== '__exhausted__');
+  const exhaustedVotes = transfers['__exhausted__'] || 0;
+
+  const W = 272, nodeW = 12;
+  const rowCount = Math.max(elimCands.length, receiverEntries.length + (exhaustedVotes > 0 ? 1 : 0));
+  const H = Math.max(160, rowCount * 36 + 40);
+
+  // Sankey nodes: eliminated first, then receivers
+  const nodes = [
+    ...elimCands.map((c, i) => ({ id: i, label: c.name.toUpperCase(), color: c.color, side: 'left' })),
+    ...receiverEntries.map(([id, v], i) => {
+      const cand = electionData.meta.candidates.find(c => c.id === id);
+      return { id: elimCands.length + i, label: cand ? cand.name.toUpperCase() : id, color: cand?.color || '#888', votes: v, side: 'right' };
+    }),
+  ];
+  if (exhaustedVotes > 0) {
+    nodes.push({ id: nodes.length, label: 'EXHAUSTED', color: '#444456', votes: exhaustedVotes, side: 'right' });
+  }
+
+  // Links: each eliminated cand contributes proportionally based on what's in transfers
+  // Since data aggregates all eliminations together, we distribute evenly across eliminated
+  const links = [];
+  const rightNodes = nodes.filter(n => n.side === 'right');
+  if (elimCands.length === 1) {
+    rightNodes.forEach(rn => {
+      links.push({ source: 0, target: rn.id, value: rn.votes });
+    });
+  } else {
+    // Multi-elimination: split each transfer proportionally by R1 votes of eliminated
+    const r1Totals = elimCands.map(c => {
+      return Object.values(electionData.towns).reduce((s, t) => s + (t.rounds?.['1']?.votes?.[c.id] || 0), 0);
+    });
+    const r1Sum = r1Totals.reduce((a, b) => a + b, 0) || 1;
+    elimCands.forEach((c, li) => {
+      const share = r1Totals[li] / r1Sum;
+      rightNodes.forEach(rn => {
+        const v = Math.round(rn.votes * share);
+        if (v > 0) links.push({ source: li, target: rn.id, value: v });
+      });
+    });
+  }
+
+  const sankey = d3.sankey()
+    .nodeId(d => d.id)
+    .nodeWidth(nodeW)
+    .nodePadding(8)
+    .extent([[1, 1], [W - 1, H - 1]]);
+
+  const graph = sankey({
+    nodes: nodes.map(n => ({ ...n })),
+    links: links.map(l => ({ ...l }))
+  });
+
+  const defs_arr = graph.links.map((link, i) => {
+    const sn = graph.nodes.find(n => n.id === (link.source.id ?? link.source));
+    const tn = graph.nodes.find(n => n.id === (link.target.id ?? link.target));
+    return { i, x1: link.source.x1, x2: link.target.x0, sc: sn?.color || '#888', tc: tn?.color || '#888' };
+  });
+
+  const svg = d3.create('svg')
+    .attr('width', W)
+    .attr('height', H)
+    .attr('viewBox', `0 0 ${W} ${H}`)
+    .style('font-family', 'Inter, sans-serif')
+    .style('overflow', 'visible');
+
+  const defs = svg.append('defs');
+  defs_arr.forEach(({ i, x1, x2, sc, tc }) => {
+    defs.append('linearGradient')
+      .attr('id', `sg${i}`)
+      .attr('gradientUnits', 'userSpaceOnUse')
+      .attr('x1', x1).attr('x2', x2)
+      .call(g => {
+        g.append('stop').attr('offset', '0%').attr('stop-color', sc).attr('stop-opacity', 0.55);
+        g.append('stop').attr('offset', '100%').attr('stop-color', tc).attr('stop-opacity', 0.55);
+      });
+  });
+
+  svg.append('g').attr('fill', 'none')
+    .selectAll('path')
+    .data(graph.links)
+    .join('path')
+    .attr('d', d3.sankeyLinkHorizontal())
+    .attr('stroke', (d, i) => `url(#sg${i})`)
+    .attr('stroke-width', d => Math.max(2, d.width));
+
+  svg.append('g')
+    .selectAll('rect')
+    .data(graph.nodes)
+    .join('rect')
+    .attr('x', d => d.x0).attr('y', d => d.y0)
+    .attr('width', d => d.x1 - d.x0)
+    .attr('height', d => Math.max(4, d.y1 - d.y0))
+    .attr('fill', d => d.color)
+    .attr('rx', 2);
+
+  // Labels
+  svg.append('g')
+    .style('font-size', '10px').style('fill', '#eaeaf2').style('font-weight', '700')
+    .selectAll('text')
+    .data(graph.nodes)
+    .join('text')
+    .attr('x', d => d.x0 < W / 2 ? d.x1 + 7 : d.x0 - 7)
+    .attr('y', d => (d.y0 + d.y1) / 2)
+    .attr('dy', '0.35em')
+    .attr('text-anchor', d => d.x0 < W / 2 ? 'start' : 'end')
+    .each(function(d) {
+      const el = d3.select(this);
+      if (d.side === 'left') {
+        el.text(d.label).style('fill', d.color);
+      } else {
+        const pct = totalTransferred > 0 ? ((d.votes / totalTransferred) * 100).toFixed(0) : 0;
+        el.text(`${d.label}  ${pct}%`);
+      }
+    });
+
+  wrap.appendChild(svg.node());
+}
+
+// Patch goToRound to refresh Sankey when in transfers view
+const __sankeyOrigGoToRound = goToRound;
+goToRound = function(round, animate) {
+  __sankeyOrigGoToRound(round, animate);
+  if (sidebarView === 'transfers') renderSankey(round);
+};
 </script>
 
 <!-- Agent 3: Story Overlay -->
