@@ -47,5 +47,21 @@
       "Loud"
     ],
     "featured": true
+  },
+  {
+    "id": "2026_gov_dem",
+    "label": "2026 Gubernatorial Dem Primary",
+    "year": 2026,
+    "race": "ME Democratic Gubernatorial Primary",
+    "status": "available",
+    "dataUrl": "data/rcv_2026_gov_dem.json",
+    "meta": "5 candidates \u00b7 Round 1 (election night) \u00b7 214,920 ballots",
+    "candidates": [
+      "Shah",
+      "Pingree",
+      "Jackson",
+      "Bellows",
+      "King III"
+    ]
   }
 ]
