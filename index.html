@@ -935,7 +935,7 @@ function buildFeatured(manifest) {
   }).join("");
 
   container.innerHTML = `
-    <a href="rcv_map.html" class="featured-card">
+    <a href="rcv_map.html?election=${featured.id}" class="featured-card">
       <div class="featured-left">
         <div>
           <div class="featured-label">Featured Interactive</div>
@@ -987,7 +987,7 @@ function buildCards(manifest) {
 
     if (isAvailable) {
       return `
-        <a href="rcv_map.html" class="election-card available">
+        <a href="rcv_map.html?election=${e.id}" class="election-card available">
           <div class="card-year">${e.year}</div>
           <div class="card-race">${e.race}</div>
           <div class="card-meta">${e.meta}</div>
