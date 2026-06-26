@@ -39,7 +39,7 @@
     "race": "CD2 Democratic Primary",
     "status": "available",
     "dataUrl": "data/rcv_2026_cd2_dem.json",
-    "meta": "4 candidates \u00b7 Round 1 (election night) \u00b7 75,720 ballots",
+    "meta": "4 candidates \u00b7 3 rounds \u00b7 83,480 ballots",
     "candidates": [
       "Baldacci",
       "Dunlap",
@@ -55,7 +55,7 @@
     "race": "ME Democratic Gubernatorial Primary",
     "status": "available",
     "dataUrl": "data/rcv_2026_gov_dem.json",
-    "meta": "5 candidates \u00b7 Round 1 (election night) \u00b7 214,920 ballots",
+    "meta": "5 candidates \u00b7 4 rounds \u00b7 222,405 ballots",
     "candidates": [
       "Shah",
       "Pingree",
