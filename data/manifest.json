@@ -6,7 +6,7 @@
     "race": "ME-CD2 Democratic Primary",
     "status": "available",
     "dataUrl": "data/rcv_2018_cd2_dem.json",
-    "meta": "4 candidates \u00b7 2 rounds \u00b7 50,845 ballots",
+    "meta": "4 candidates · 2 rounds · 50,845 ballots",
     "candidates": [
       "Golden",
       "St. Clair",
@@ -21,7 +21,7 @@
     "race": "ME Democratic Gubernatorial Primary",
     "status": "available",
     "dataUrl": "data/rcv_2018_gov_dem.json",
-    "meta": "8 candidates \u00b7 4 rounds \u00b7 132,250 ballots",
+    "meta": "8 candidates · 4 rounds · 132,250 ballots",
     "candidates": [
       "Mills",
       "Cote",
@@ -39,7 +39,7 @@
     "race": "CD2 Democratic Primary",
     "status": "available",
     "dataUrl": "data/rcv_2026_cd2_dem.json",
-    "meta": "4 candidates \u00b7 3 rounds \u00b7 83,480 ballots",
+    "meta": "4 candidates · 3 rounds · 83,480 ballots",
     "candidates": [
       "Baldacci",
       "Dunlap",
@@ -55,13 +55,33 @@
     "race": "ME Democratic Gubernatorial Primary",
     "status": "available",
     "dataUrl": "data/rcv_2026_gov_dem.json",
-    "meta": "5 candidates \u00b7 4 rounds \u00b7 222,405 ballots",
+    "meta": "5 candidates · 4 rounds · 222,405 ballots",
     "candidates": [
       "Shah",
       "Pingree",
       "Jackson",
       "Bellows",
       "King III"
+    ],
+    "featured": true
+  },
+  {
+    "id": "2026_gov_rep",
+    "label": "2026 Gubernatorial Rep Primary",
+    "year": 2026,
+    "race": "ME Republican Gubernatorial Primary",
+    "status": "available",
+    "dataUrl": "data/rcv_2026_gov_rep.json",
+    "meta": "8 candidates · 7 rounds · 137,981 ballots",
+    "candidates": [
+      "Charles",
+      "Midgley",
+      "Bush",
+      "Mason",
+      "McCarthy",
+      "Jones",
+      "Wessels",
+      "Libby"
     ],
     "featured": true
   }
