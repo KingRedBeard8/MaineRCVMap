@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Maine Maproom | Maine Politics, Maps, Data &amp; Analysis</title>
+  <meta name="description" content="The Maine Maproom explains Maine politics through election maps, ranked-choice data, campaign strategy, tools, analysis, and deep dives.">
+  <link rel="canonical" href="https://mainemaproom.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg: #0d0d10;
+      --bg-soft: #111116;
+      --surface: #16161c;
+      --surface-raised: #1e1e26;
+      --border: #2a2a36;
+      --border-strong: #3a3527;
+      --text-primary: #eaeaf2;
+      --text-secondary: #9a9ab3;
+      --text-muted: #71718b;
+      --gold: #b8963c;
+      --gold-bright: #d4a843;
+      --gold-soft: rgba(184, 150, 60, 0.13);
+      --shadow: rgba(0, 0, 0, 0.28);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top left, rgba(184, 150, 60, 0.13), transparent 34rem),
+        radial-gradient(circle at 80% 5%, rgba(255, 255, 255, 0.035), transparent 24rem),
+        var(--bg);
+      color: var(--text-primary);
+      font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(13, 13, 16, 0.91);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 1160px;
+      height: 60px;
+      margin: 0 auto;
+      padding: 0 28px;
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 25px;
+      height: 25px;
+      border: 1px solid var(--gold);
+      border-radius: 4px;
+      background:
+        linear-gradient(90deg, transparent 47%, rgba(184, 150, 60, 0.35) 48%, rgba(184, 150, 60, 0.35) 52%, transparent 53%),
+        linear-gradient(0deg, transparent 47%, rgba(184, 150, 60, 0.35) 48%, rgba(184, 150, 60, 0.35) 52%, transparent 53%),
+        var(--gold-soft);
+      box-shadow: 0 0 0 3px rgba(184, 150, 60, 0.05);
+    }
+
+    .brand span { color: var(--gold); }
+
+    .nav-links {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text-secondary);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: color 0.15s ease;
+    }
+
+    .nav-links a:hover { color: var(--gold-bright); }
+
+    .wrap {
+      max-width: 1160px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    .hero {
+      padding: 88px 0 70px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      max-width: 780px;
+      font-size: clamp(42px, 7vw, 78px);
+      line-height: 0.98;
+      letter-spacing: -0.055em;
+      font-weight: 800;
+      margin-bottom: 22px;
+    }
+
+    .tagline {
+      color: var(--gold-bright);
+      font-size: clamp(20px, 3vw, 30px);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      margin-bottom: 18px;
+    }
+
+    .subhead {
+      max-width: 680px;
+      color: var(--text-secondary);
+      font-size: 17px;
+      line-height: 1.75;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 43px;
+      padding: 11px 19px;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease, color 0.15s ease;
+    }
+
+    .button:hover { transform: translateY(-1px); }
+
+    .button.primary {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #0d0d10;
+    }
+
+    .button.primary:hover { background: var(--gold-bright); border-color: var(--gold-bright); }
+
+    .button.secondary { color: var(--text-secondary); background: rgba(255, 255, 255, 0.015); }
+    .button.secondary:hover { color: var(--gold-bright); border-color: var(--gold); }
+
+    .hero-panel {
+      background: linear-gradient(180deg, rgba(30, 30, 38, 0.95), rgba(22, 22, 28, 0.95));
+      border: 1px solid var(--border-strong);
+      border-radius: 14px;
+      box-shadow: 0 24px 80px var(--shadow);
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(90deg, transparent 0 19%, rgba(184, 150, 60, 0.06) 19.2% 19.6%, transparent 19.8% 100%),
+        linear-gradient(0deg, transparent 0 24%, rgba(184, 150, 60, 0.045) 24.2% 24.5%, transparent 24.7% 100%);
+      background-size: 62px 62px;
+      opacity: 0.75;
+      pointer-events: none;
+    }
+
+    .panel-content { position: relative; z-index: 1; }
+
+    .panel-kicker {
+      color: var(--text-muted);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    .panel-title {
+      font-size: 20px;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .stat-list { display: grid; gap: 10px; }
+
+    .stat {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      border-top: 1px solid var(--border);
+      padding-top: 10px;
+      color: var(--text-secondary);
+      font-size: 13px;
+    }
+
+    .stat strong { color: var(--text-primary); font-weight: 700; }
+
+    .section {
+      padding: 68px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 26px;
+      align-items: end;
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      font-size: clamp(24px, 4vw, 36px);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+      margin-bottom: 8px;
+    }
+
+    .section-sub {
+      max-width: 690px;
+      color: var(--text-secondary);
+      font-size: 14px;
+      line-height: 1.75;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: rgba(22, 22, 28, 0.92);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      min-height: 190px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+    }
+
+    a.card:hover {
+      transform: translateY(-2px);
+      border-color: var(--gold);
+      background: var(--surface-raised);
+    }
+
+    .card.featured::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background: var(--gold);
+    }
+
+    .card-label {
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .card h3 {
+      font-size: 18px;
+      line-height: 1.28;
+      letter-spacing: -0.02em;
+      margin-bottom: 8px;
+    }
+
+    .card p {
+      color: var(--text-secondary);
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .card-meta {
+      color: var(--text-muted);
+      font-size: 12px;
+      margin-top: 12px;
+    }
+
+    .card-action {
+      margin-top: auto;
+      padding-top: 22px;
+      color: var(--gold-bright);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .coming-soon {
+      color: var(--text-muted);
+      border-color: rgba(42, 42, 54, 0.7);
+      background: rgba(22, 22, 28, 0.58);
+    }
+
+    .coming-soon h3 { color: var(--text-primary); }
+
+    .maproom-grid {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .small-card {
+      min-height: 150px;
+    }
+
+    .about-box {
+      background: linear-gradient(180deg, rgba(22, 22, 28, 0.96), rgba(17, 17, 22, 0.96));
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: clamp(28px, 5vw, 46px);
+      display: grid;
+      grid-template-columns: 0.75fr 1.25fr;
+      gap: 34px;
+      align-items: start;
+    }
+
+    .about-title {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    .about-copy {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.85;
+    }
+
+    .footer {
+      padding: 34px 0;
+      color: var(--text-secondary);
+    }
+
+    .footer-inner {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      align-items: center;
+    }
+
+    .footer-brand {
+      font-size: 13px;
+      line-height: 1.7;
+    }
+
+    .footer-brand strong { color: var(--text-primary); }
+
+    .footer-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      list-style: none;
+      justify-content: flex-end;
+    }
+
+    .footer-links a {
+      color: var(--text-secondary);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover { color: var(--gold-bright); }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .about-box { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .maproom-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .section-top { display: block; }
+    }
+
+    @media (max-width: 680px) {
+      .nav-inner { height: auto; padding: 17px 20px; align-items: flex-start; flex-direction: column; gap: 14px; }
+      .nav-links { margin-left: 0; flex-wrap: wrap; gap: 12px 16px; }
+      .wrap { padding: 0 20px; }
+      .hero { padding: 54px 0 48px; }
+      .hero-panel { padding: 22px; }
+      .section { padding: 48px 0; }
+      .grid,
+      .maproom-grid { grid-template-columns: 1fr; }
+      .card { min-height: 0; }
+      .hero-actions { flex-direction: column; align-items: stretch; }
+      .button { width: 100%; }
+      .footer-inner { grid-template-columns: 1fr; }
+      .footer-links { justify-content: flex-start; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="nav" aria-label="Primary navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="brand" aria-label="The Maine Maproom home">
+        <span class="brand-mark" aria-hidden="true"></span>
+        The Maine <span>Maproom</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#featured-work">Maps</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#analysis">Analysis</a></li>
+        <li><a href="#methodology">Methodology</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Election maps · RCV data · Maine campaign analysis</div>
+          <h1>The Maine Maproom</h1>
+          <div class="tagline">Maine politics, mapped and explained.</div>
+          <p class="subhead">Election maps, ranked-choice breakdowns, campaign strategy, tools, analysis, and deep dives from across Maine.</p>
+          <div class="hero-actions" aria-label="Homepage actions">
+            <a class="button primary" href="#featured-work">Explore Maps</a>
+            <a class="button secondary" href="#tools">Use Tools</a>
+            <a class="button secondary" href="#analysis">Read Analysis</a>
+          </div>
+        </div>
+        <aside class="hero-panel" aria-label="The Maine Maproom positioning">
+          <div class="panel-content">
+            <div class="panel-kicker">The Maproom Brief</div>
+            <div class="panel-title">A serious Maine political data and publication hub.</div>
+            <div class="stat-list">
+              <div class="stat"><span>Focus</span><strong>Geography</strong></div>
+              <div class="stat"><span>Specialty</span><strong>Ranked-choice elections</strong></div>
+              <div class="stat"><span>Lens</span><strong>Coalitions &amp; strategy</strong></div>
+              <div class="stat"><span>Coverage</span><strong>Maine politics</strong></div>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </header>
+
+    <section class="section" id="featured-work">
+      <div class="wrap">
+        <div class="section-top">
+          <div>
+            <div class="eyebrow">Featured Work</div>
+            <h2>Start with the maps.</h2>
+            <p class="section-sub">Interactive election projects, coming simulations, and analysis built to show not only who won, but how support moved across Maine.</p>
+          </div>
+        </div>
+
+        <div class="grid">
+          <a class="card featured" href="rcv_map.html">
+            <div class="card-label">Interactive RCV Map</div>
+            <h3>2018 CD2 Democratic Primary</h3>
+            <p>Round-by-round ranked-choice map for Maine&rsquo;s Second Congressional District Democratic primary.</p>
+            <div class="card-meta">4 candidates · 4 rounds · 50,845 ballots</div>
+            <div class="card-action">Open map →</div>
+          </a>
+
+          <div class="card coming-soon">
+            <div class="card-label">Coming Soon</div>
+            <h3>2026 CD2 Democratic Primary</h3>
+            <p>Baldacci · Dunlap · Loud · Wood</p>
+            <div class="card-action">In development</div>
+          </div>
+
+          <div class="card coming-soon" id="tools">
+            <div class="card-label">Coming Soon</div>
+            <h3>RCV Simulator</h3>
+            <p>Test ranked-choice election scenarios and see how transfers can change the final outcome.</p>
+            <div class="card-action">Tool planned</div>
+          </div>
+
+          <div class="card coming-soon" id="analysis">
+            <div class="card-label">Coming Soon</div>
+            <h3>Analysis</h3>
+            <p>Race breakdowns, predictions, essays, and campaign notes.</p>
+            <div class="card-action">Publication hub planned</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="explore">
+      <div class="wrap">
+        <div class="eyebrow">Explore the Maproom</div>
+        <h2>Maps, tools, analysis, and methods.</h2>
+        <p class="section-sub">The Maine Maproom is organized around the work needed to understand Maine elections: visual evidence, reusable tools, written analysis, and transparent methodology.</p>
+
+        <div class="grid maproom-grid" style="margin-top:30px;">
+          <a class="card small-card" href="#featured-work">
+            <div class="card-label">Maps</div>
+            <h3>Election Maps</h3>
+            <p>Town-level and district-level views of Maine political geography.</p>
+          </a>
+
+          <a class="card small-card" href="#tools">
+            <div class="card-label">Tools</div>
+            <h3>Campaign Tools</h3>
+            <p>Ranked-choice simulations and practical ways to explore election scenarios.</p>
+          </a>
+
+          <a class="card small-card" href="#analysis">
+            <div class="card-label">Analysis</div>
+            <h3>Political Analysis</h3>
+            <p>Race breakdowns, predictions, strategy notes, and essays.</p>
+          </a>
+
+          <a class="card small-card" href="#methodology">
+            <div class="card-label">Methodology</div>
+            <h3>Data Methods</h3>
+            <p>How maps are built, validated, and explained.</p>
+          </a>
+
+          <a class="card small-card" href="#about">
+            <div class="card-label">About</div>
+            <h3>The Project</h3>
+            <p>Why The Maine Maproom exists and what it is trying to make clearer.</p>
+          </a>
+
+          <a class="card small-card" href="https://github.com/kingredbeard8/MaineRCVMap" target="_blank" rel="noopener">
+            <div class="card-label">Contribute</div>
+            <h3>GitHub</h3>
+            <p>View the project repository and follow future development.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="methodology">
+      <div class="wrap">
+        <div class="eyebrow">Methodology</div>
+        <h2>Transparent by design.</h2>
+        <p class="section-sub">The Maproom is built around public data, clear assumptions, and visible methods. As new projects are added, this section will explain data sources, processing choices, limitations, and validation notes.</p>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="wrap">
+        <div class="about-box">
+          <div>
+            <div class="about-title">About The Maine Maproom</div>
+          </div>
+          <p class="about-copy">The Maine Maproom is a home for understanding Maine politics through maps, data, and campaign analysis. We look at elections geographically, historically, and strategically — not just who won, but where support came from, how coalitions moved, and what the results reveal about political power in Maine.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <strong>The Maine Maproom</strong> · Maine politics, mapped and explained.<br>
+        Founded by Derek Lane.
+      </div>
+      <ul class="footer-links">
+        <li><a href="https://github.com/kingredbeard8/MaineRCVMap" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="#" aria-label="Facebook placeholder link">Facebook</a></li>
+        <li><a href="#" aria-label="TikTok placeholder link">TikTok</a></li>
+        <li><a href="#" aria-label="Bluesky placeholder link">Bluesky</a></li>
+        <li><a href="#" aria-label="Substack placeholder link">Substack</a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
